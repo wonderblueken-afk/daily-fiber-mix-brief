@@ -33,7 +33,7 @@
   .nav a{flex:0 0 auto;font-size:.84rem;color:var(--ink2);text-decoration:none;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;white-space:nowrap}
   .nav a:hover{color:var(--green);border-color:var(--green)}
 
-  section{padding:44px 0 8px}
+  section{padding:28px 0 4px}
   .sec-tag{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
   h2{font-size:clamp(1.4rem,3.4vw,1.9rem);font-weight:800;letter-spacing:-.01em;margin-bottom:18px}
   h3{font-size:1.12rem;font-weight:700;margin-bottom:10px}
@@ -53,9 +53,8 @@
   .slogan{font-size:1.15rem;font-weight:700;color:var(--green-d);margin-top:14px}
 
   /* ===== Benefits grid ===== */
-  .benefits{display:grid;gap:12px;grid-template-columns:1fr}
-  @media(min-width:640px){.benefits{grid-template-columns:repeat(2,1fr)}}
-  .benefit{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;font-size:.95rem;color:var(--ink)}
+  .benefits{display:grid;gap:10px;grid-template-columns:1fr}
+  .benefit{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:.92rem;color:var(--ink)}
   .benefit strong{color:var(--green-d)}
 
   /* ===== Why three columns ===== */
@@ -105,6 +104,51 @@
   .note{font-size:.88rem;color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:16px;margin-top:12px}
   footer{padding:48px 0 60px;text-align:center;color:var(--ink3);font-size:.85rem}
   .tag-inline{display:inline-block;background:var(--green-soft);color:var(--green-d);border-radius:8px;padding:1px 8px;font-size:.85rem;font-weight:700}
+
+  /* ===== Accordion (About) ===== */
+  .acc{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .acc summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 22px;font-size:1.12rem;font-weight:800;letter-spacing:-.01em}
+  .acc summary::-webkit-details-marker{display:none}
+  .acc summary .chev{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--green-soft);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:700;transition:transform .2s}
+  .acc[open] summary .chev{transform:rotate(90deg)}
+  .acc .acc-body{padding:0 22px 20px}
+
+  /* ===== Pack + Benefits side by side ===== */
+  .pb-grid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:760px){.pb-grid{grid-template-columns:1.15fr .85fr;align-items:start}}
+  .pack-card .prod-row{display:flex;gap:16px;align-items:center;margin-bottom:14px}
+  .pack-card .prod-row img{width:118px;height:118px;object-fit:cover;border-radius:14px;border:1px solid var(--line);flex:0 0 auto;background:#fff}
+  .shop-btn{display:inline-flex;align-items:center;gap:7px;background:var(--green);color:#fff;font-weight:700;font-size:.86rem;padding:10px 16px;border-radius:999px;text-decoration:none;white-space:nowrap}
+  .shop-btn:hover{background:var(--green-d)}
+  .shop-btn svg{width:15px;height:15px}
+
+  /* ===== Content 3-column workspace ===== */
+  .cw{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:900px){.cw{grid-template-columns:1.15fr 1fr 1fr;align-items:start}}
+  .cw .col{display:flex;flex-direction:column;gap:12px;min-width:0}
+  .hook-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px}
+  .hook-card .no{font-size:.74rem;font-weight:800;color:var(--green);letter-spacing:.09em;margin-bottom:4px}
+  .hook-card h3{font-size:1rem;margin-bottom:6px}
+  .hook-card .role{font-size:.82rem;color:var(--ink3);margin-bottom:10px}
+  .hook-card .lbl{font-size:.74rem;font-weight:700;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;margin:8px 0 4px}
+  .hook-card .quote{font-size:.86rem;padding:10px 12px;margin:5px 0}
+  .side-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .side-card h3{font-size:1.05rem;margin-bottom:10px}
+  .side-card li{font-size:.9rem;margin-bottom:9px}
+  .side-card .quote{font-size:.86rem;padding:10px 12px;margin:6px 0}
+  .opt-list{display:grid;gap:4px 18px;grid-template-columns:1fr}
+  @media(min-width:760px){.opt-list{grid-template-columns:repeat(2,1fr)}}
+  .opt-list li{font-size:.88rem;margin-bottom:8px}
+
+  /* ===== Reference compact row ===== */
+  .ref-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
+  @media(min-width:760px){.ref-grid{grid-template-columns:repeat(4,1fr)}}
+  .ref-item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .ref-item video{width:100%;aspect-ratio:9/14;object-fit:cover;background:#000;display:block}
+  .ref-item figcaption{font-size:.74rem;color:var(--ink2);padding:8px 10px 0;line-height:1.3}
+  .ref-item .actions{display:flex;gap:6px;padding:8px 10px 10px}
+  .ref-item .actions a{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:999px;padding:7px 8px;font-size:.74rem;font-weight:700;text-decoration:none;line-height:1.1}
+  .ref-item .actions svg{width:13px;height:13px;flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -136,39 +180,50 @@
 <!-- ===== ABOUT ===== -->
 <section id="about">
   <div class="sec-tag">About WonderBiotics</div>
-  <h2>About WonderBiotics</h2>
-  <div class="card">
-    <ul class="num-list">
-      <li>We are a global, science-led microbiome supplement brand — built on clinical evidence, trusted by <strong>1 billion gut-health moments</strong> worldwide.</li>
-      <li>Every formula is co-created with the world's best minds: leading microbiome scientists, nutritionists, and Hollywood star trainers.</li>
-      <li>Our philosophy goes beyond evidence. Science earns our trust, but it only truly works when it <strong>fits seamlessly into your life</strong>.</li>
-    </ul>
-    <div class="slogan">WonderBiotics. It works, Wonderfully.</div>
-  </div>
+  <details class="acc">
+    <summary>About WonderBiotics <span class="chev">›</span></summary>
+    <div class="acc-body">
+      <ul class="num-list">
+        <li>We are a global, science-led microbiome supplement brand — built on clinical evidence, trusted by <strong>1 billion gut-health moments</strong> worldwide.</li>
+        <li>Every formula is co-created with the world's best minds: leading microbiome scientists, nutritionists, and Hollywood star trainers.</li>
+        <li>Our philosophy goes beyond evidence. Science earns our trust, but it only truly works when it <strong>fits seamlessly into your life</strong>.</li>
+      </ul>
+    </div>
+  </details>
+  <div class="slogan">WonderBiotics. It works, Wonderfully.</div>
 </section>
 
-<!-- ===== PACK ===== -->
+<!-- ===== PACK + BENEFITS SIDE BY SIDE ===== -->
 <section id="pack">
-  <div class="sec-tag">Daily Fiber Mix Pack</div>
-  <h2>Daily Fiber Mix Pack....</h2>
-  <div class="card">
-    <ul>
-      <li>A clear, flavorless prebiotic fiber supplement that supports regularity, eases bloating, promotes digestive health, and helps increase fullness—all in one easy daily stick.</li>
-      <li>Each stick contains <strong>4</strong> kinds of prebiotics, <strong>5</strong> kinds of fibers &amp;Superfood adn <strong>6</strong> gram of fibers, —the equivalent of the fiber in <strong>20 raspberries</strong>. It is Non-GMO, Low-FODMAP.</li>
-      <li>Mix one stick into your favorite drink daily for a simple, convenient way to add more fiber to your routine.</li>
-    </ul>
-  </div>
-</section>
+  <div class="sec-tag">Daily Fiber Mix Pack · Benefits</div>
+  <div class="pb-grid">
+    <div class="card pack-card">
+      <div class="prod-row">
+        <img src="assets/product-fiber.webp" alt="WonderBiotics Daily Fiber Mix product" loading="lazy">
+        <div>
+          <h2 style="font-size:1.25rem;margin-bottom:8px">Daily Fiber Mix Pack....</h2>
+          <a class="shop-btn" href="https://shop.tiktok.com/us/pdp/wonderbiotics-daily-prebiotic-fiber-powder-30-stick-packs/1732349905506177607" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
+            View on TikTok Shop
+          </a>
+        </div>
+      </div>
+      <ul>
+        <li>A clear, flavorless prebiotic fiber supplement that supports regularity, eases bloating, promotes digestive health, and helps increase fullness—all in one easy daily stick.</li>
+        <li>Each stick contains <strong>4</strong> kinds of prebiotics, <strong>5</strong> kinds of fibers &amp;Superfood adn <strong>6</strong> gram of fibers, —the equivalent of the fiber in <strong>20 raspberries</strong>. It is Non-GMO, Low-FODMAP.</li>
+        <li>Mix one stick into your favorite drink daily for a simple, convenient way to add more fiber to your routine.</li>
+      </ul>
+    </div>
 
-<!-- ===== BENEFITS ===== -->
-<section id="benefits">
-  <div class="sec-tag">Benefits</div>
-  <h2>Benefits</h2>
-  <div class="benefits">
-    <div class="benefit"><strong>Helps ease</strong> bloating and digestive discomfort, to ensure you have the <strong>flat tummy</strong></div>
-    <div class="benefit"><strong>Supports</strong> regular bowel movements.</div>
-    <div class="benefit"><strong>Promotes</strong> a healthy gut microbiome.</div>
-    <div class="benefit"><strong>Helps increase</strong> fullness and shut the food noise.</div>
+    <div id="benefits">
+      <div class="sec-tag">Benefits</div>
+      <div class="benefits">
+        <div class="benefit"><strong>Helps ease</strong> bloating and digestive discomfort, to ensure you have the <strong>flat tummy</strong></div>
+        <div class="benefit"><strong>Supports</strong> regular bowel movements.</div>
+        <div class="benefit"><strong>Promotes</strong> a healthy gut microbiome.</div>
+        <div class="benefit"><strong>Helps increase</strong> fullness and shut the food noise.</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -221,19 +276,13 @@
 <section id="content">
   <div class="sec-tag">Content</div>
   <h2>Please create <strong>all three required videos</strong>:</h2>
-  <div class="card" style="margin-bottom:16px">
-    <ul>
-      <li><strong>Before-and-After Result Reveal</strong></li>
-      <li><strong>Reverse-Psychology Product Review</strong></li>
-      <li><strong>Discount-First Concept</strong></li>
-    </ul>
-    <p style="margin-top:10px">For any additional videos, you may choose from the <strong>Optional Formats</strong> or develop your own creative concept. If you would like to create your own concept, please share the idea with our team in advance and wait for confirmation before filming.</p>
-  </div>
+  <p style="margin-bottom:14px;font-size:.95rem">Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</p>
 
-  <div class="concepts">
+  <div class="cw">
+  <div class="col"><!-- LEFT: three hooks -->
 
     <!-- VIDEO 1 -->
-    <div class="concept">
+    <div class="hook-card">
       <div class="no">MUST DO · VIDEO 1</div>
       <h3>Before-and-After Result Reveal</h3>
       <p class="role">Open with a clear, personal before-and-after visual, then share your experience with Daily Fiber Mix and how it fits into your routine.</p>
@@ -261,7 +310,7 @@
     </div>
 
     <!-- VIDEO 2 -->
-    <div class="concept">
+    <div class="hook-card">
       <div class="no">MUST DO · VIDEO 2</div>
       <h3>Reverse-Psychology Product Review</h3>
       <p class="role">Open with a playful warning or mock complaint, then reveal your honest experience with Daily Fiber Mix. Then share its taste, texture, convenience, and the personal benefits you've noticed.</p>
@@ -278,7 +327,7 @@
     </div>
 
     <!-- VIDEO 3 -->
-    <div class="concept">
+    <div class="hook-card">
       <div class="no">MUST DO · VIDEO 3</div>
       <h3>Discount-First Concept</h3>
       <p class="role">Open with the Black Friday offer, then show the product and explain what comes with the deal.</p>
@@ -292,10 +341,11 @@
       </div>
     </div>
 
-  </div><!-- /concepts -->
+  </div><!-- /left column -->
 
-  <!-- SHARED BODY -->
-  <div class="card" style="margin-top:16px">
+  <div class="col">
+  <!-- SHARED BODY (middle) -->
+  <div class="side-card">
     <h3>Body</h3>
     <ul>
       <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
@@ -303,9 +353,11 @@
       <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
     </ul>
   </div>
+  </div>
 
-  <!-- SHARED CTA -->
-  <div class="card" style="margin-top:16px">
+  <div class="col">
+  <!-- SHARED CTA (right) -->
+  <div class="side-card">
     <h3>CTA to Use</h3>
     <p>Every video must mention the <strong>Black Friday offer</strong> and our <strong>satisfaction guarantee</strong>. Choose one CTA and adapt it to your voice.</p>
     <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
@@ -313,11 +365,14 @@
     <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
     <div class="quote"><strong>Guarantee angle:</strong> "Can you believe WonderBiotics offers a satisfaction guarantee? They're that confident in the Daily Fiber Mix used and recommended by a Hollywood celebrity trainer. Right now, the special three-pack bundle has an amazing Black Friday deal, so tap the product link to discover the Hollywood flat-tummy fiber secret!"</div>
   </div>
+  </div>
 
-  <!-- OPTIONAL FORMATS -->
-  <div class="card" style="margin-top:16px">
+</div><!-- /cw -->
+
+  <!-- OPTIONAL FORMATS (below must videos) -->
+  <div class="side-card" style="margin-top:14px">
     <h3>Optional Formats</h3>
-    <ul>
+    <ul class="opt-list">
       <li><strong>Reaction Video — Duet / Stitch</strong> — React to a fiber trend, celebrity-trainer recommendation, or gut-health conversation, then share your perspective and introduce Daily Fiber Mix.</li>
       <li><strong>Everyday Coffee Routine / GRWM</strong> — Show how you mix Daily Fiber Mix into a drink that's already part of your daily routine.</li>
       <li><strong>Pop-Culture &amp; Seasonal Gift Angle</strong> — Tie the video to a relevant pop-culture moment or seasonal occasion. For Thanksgiving or Christmas, you can also present Daily Fiber Mix as a thoughtful wellness gift for someone who wants an easy way to add fiber to their routine.</li>
@@ -384,9 +439,9 @@
   <div class="sec-tag">Reference</div>
   <h2>Reference</h2>
   <p style="margin-bottom:16px">Reference videos — tap to play, download the MP4, or open the original on TikTok.</p>
-  <div class="media-grid">
+  <div class="ref-grid">
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7689433700164963614.mp4"></video>
       <figcaption>@harley_pasternak · Harley</figcaption>
       <div class="actions">
@@ -399,9 +454,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7678902268699102478.mp4"></video>
       <figcaption>@charlieputh · Charlie Puth</figcaption>
       <div class="actions">
@@ -414,9 +469,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7445243151876377861.mp4"></video>
       <figcaption>@edenjosephinemangnus</figcaption>
       <div class="actions">
@@ -429,9 +484,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7674414956644814094.mp4"></video>
       <figcaption>@theelailah</figcaption>
       <div class="actions">
@@ -444,9 +499,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7652925795547041038.mp4"></video>
       <figcaption>@barefoot.plant.mama</figcaption>
       <div class="actions">
@@ -459,9 +514,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7600463292632468767.mp4"></video>
       <figcaption>@anci.social</figcaption>
       <div class="actions">
@@ -474,9 +529,9 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
-    <figure class="media">
+    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7669009886310649101.mp4"></video>
       <figcaption>@zodontmiss</figcaption>
       <div class="actions">
@@ -489,7 +544,7 @@
           Watch on TikTok
         </a>
       </div>
-    </figure>
+    </div>
 
   </div>
 </section>
