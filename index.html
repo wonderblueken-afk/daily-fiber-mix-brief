@@ -140,6 +140,25 @@
   @media(min-width:760px){.opt-list{grid-template-columns:repeat(2,1fr)}}
   .opt-list li{font-size:.88rem;margin-bottom:8px}
 
+  /* ===== Three full video cards ===== */
+  .vgrid{display:grid;gap:14px;grid-template-columns:1fr}
+  @media(min-width:960px){.vgrid{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+  .vcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+  .vcard .no{font-size:.74rem;font-weight:800;color:var(--green);letter-spacing:.09em}
+  .vcard h3{font-size:1.1rem;line-height:1.3;margin:2px 0}
+  .vcard .role{font-size:.86rem;color:var(--ink3)}
+  .vsub{font-size:.74rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--green-d);margin:8px 0 4px}
+  .vcard .quote{font-size:.84rem;padding:9px 11px;margin:5px 0}
+  .vbody{background:var(--bg,#f6f7f8);border-radius:12px;padding:12px 14px;margin-top:2px}
+  .vbody li{font-size:.86rem;margin-bottom:8px}
+  .vcta details{background:var(--bg,#f6f7f8);border-radius:12px;margin-top:2px}
+  .vcta summary{cursor:pointer;padding:12px 14px;font-weight:700;font-size:.9rem;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:8px}
+  .vcta summary::-webkit-details-marker{display:none}
+  .vcta summary .chev{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--green-soft);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:transform .2s}
+  .vcta details[open] summary .chev{transform:rotate(90deg)}
+  .vcta .vcta-body{padding:0 14px 12px}
+  .vcta .quote{font-size:.84rem;padding:9px 11px;margin:5px 0}
+
   /* ===== Reference compact row ===== */
   .ref-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:760px){.ref-grid{grid-template-columns:repeat(4,1fr)}}
@@ -278,18 +297,18 @@
   <h2>Please create <strong>all three required videos</strong>:</h2>
   <p style="margin-bottom:14px;font-size:.95rem">Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</p>
 
-  <div class="cw">
-  <div class="col"><!-- LEFT: three hooks -->
+  <div class="vgrid">
 
-    <!-- VIDEO 1 -->
-    <div class="hook-card">
+    <!-- ===== VIDEO 1 ===== -->
+    <div class="vcard">
       <div class="no">MUST DO · VIDEO 1</div>
       <h3>Before-and-After Result Reveal</h3>
       <p class="role">Open with a clear, personal before-and-after visual, then share your experience with Daily Fiber Mix and how it fits into your routine.</p>
-      <div class="blk">
-        <div class="lbl">Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</div>
-        <p style="font-size:.9rem">Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</p>
-        <div class="lbl" style="margin-top:10px">On-screen text options (Pick one to use):</div>
+
+      <div>
+        <div class="vsub">Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</div>
+        <p style="font-size:.86rem">Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</p>
+        <div class="vsub" style="margin-top:8px">On-screen text options (Pick one to use):</div>
         <div class="quote">"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</div>
         <div class="quote">"LADY GAGA'S TRAINER WASN'T LYING…"</div>
         <div class="quote">"I found Charlie Puth's flat-stomach secret."</div>
@@ -307,16 +326,39 @@
           <img src="assets/hook-d.png" alt="Reference example D" loading="lazy">
         </div>
       </div>
+
+      <div class="vbody">
+        <div class="vsub">Body</div>
+        <ul>
+          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+        </ul>
+      </div>
+
+      <div class="vcta">
+        <details>
+          <summary>CTA to Use <span class="chev">›</span></summary>
+          <div class="vcta-body">
+            <p style="font-size:.84rem">Every video must mention the <strong>Black Friday offer</strong> and our <strong>satisfaction guarantee</strong>. Choose one CTA and adapt it to your voice.</p>
+            <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
+            <div class="quote"><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</div>
+            <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
+            <div class="quote"><strong>Guarantee angle:</strong> "Can you believe WonderBiotics offers a satisfaction guarantee? They're that confident in the Daily Fiber Mix used and recommended by a Hollywood celebrity trainer. Right now, the special three-pack bundle has an amazing Black Friday deal, so tap the product link to discover the Hollywood flat-tummy fiber secret!"</div>
+          </div>
+        </details>
+      </div>
     </div>
 
-    <!-- VIDEO 2 -->
-    <div class="hook-card">
+    <!-- ===== VIDEO 2 ===== -->
+    <div class="vcard">
       <div class="no">MUST DO · VIDEO 2</div>
       <h3>Reverse-Psychology Product Review</h3>
       <p class="role">Open with a playful warning or mock complaint, then reveal your honest experience with Daily Fiber Mix. Then share its taste, texture, convenience, and the personal benefits you've noticed.</p>
-      <div class="blk">
-        <div class="lbl">Hook to Use — Reverse-Psychology Hook</div>
-        <p style="font-size:.9rem">Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</p>
+
+      <div>
+        <div class="vsub">Hook to Use — Reverse-Psychology Hook</div>
+        <p style="font-size:.86rem">Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</p>
         <div class="quote">"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</div>
         <div class="quote">"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</div>
         <div class="quote">"If you love feeling bloated, keep scrolling—this video isn't for you."</div>
@@ -324,50 +366,69 @@
         <div class="quote">"Don't try this if you're not ready to make fiber part of your daily routine."</div>
         <div class="quote">"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</div>
       </div>
+
+      <div class="vbody">
+        <div class="vsub">Body</div>
+        <ul>
+          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+        </ul>
+      </div>
+
+      <div class="vcta">
+        <details>
+          <summary>CTA to Use <span class="chev">›</span></summary>
+          <div class="vcta-body">
+            <p style="font-size:.84rem">Every video must mention the <strong>Black Friday offer</strong> and our <strong>satisfaction guarantee</strong>. Choose one CTA and adapt it to your voice.</p>
+            <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
+            <div class="quote"><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</div>
+            <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
+            <div class="quote"><strong>Guarantee angle:</strong> "Can you believe WonderBiotics offers a satisfaction guarantee? They're that confident in the Daily Fiber Mix used and recommended by a Hollywood celebrity trainer. Right now, the special three-pack bundle has an amazing Black Friday deal, so tap the product link to discover the Hollywood flat-tummy fiber secret!"</div>
+          </div>
+        </details>
+      </div>
     </div>
 
-    <!-- VIDEO 3 -->
-    <div class="hook-card">
+    <!-- ===== VIDEO 3 ===== -->
+    <div class="vcard">
       <div class="no">MUST DO · VIDEO 3</div>
       <h3>Discount-First Concept</h3>
       <p class="role">Open with the Black Friday offer, then show the product and explain what comes with the deal.</p>
-      <div class="blk">
-        <div class="lbl">Hook to Use — Discount-First Hook</div>
-        <p style="font-size:.9rem">Lead with the Black Friday offer, then show the product and explain what comes with the deal (Pick one to use):</p>
+
+      <div>
+        <div class="vsub">Hook to Use — Discount-First Hook</div>
+        <p style="font-size:.86rem">Lead with the Black Friday offer, then show the product and explain what comes with the deal (Pick one to use):</p>
         <div class="quote">"Don't scroll! The special three-pack has an amazing Black Friday deal—don't miss your chance to discover the flat-tummy fiber routine recommended by a Hollywood celebrity trainer!"</div>
         <div class="quote">"Not one, not two, but three full packs! The three-pack bundle has a huge Black Friday deal, so you can stock up on the flat-tummy fiber routine Hollywood stars are turning to—and it's backed by a satisfaction guarantee."</div>
         <div class="quote">"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</div>
         <div class="quote">"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</div>
       </div>
+
+      <div class="vbody">
+        <div class="vsub">Body</div>
+        <ul>
+          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+        </ul>
+      </div>
+
+      <div class="vcta">
+        <details>
+          <summary>CTA to Use <span class="chev">›</span></summary>
+          <div class="vcta-body">
+            <p style="font-size:.84rem">Every video must mention the <strong>Black Friday offer</strong> and our <strong>satisfaction guarantee</strong>. Choose one CTA and adapt it to your voice.</p>
+            <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
+            <div class="quote"><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</div>
+            <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
+            <div class="quote"><strong>Guarantee angle:</strong> "Can you believe WonderBiotics offers a satisfaction guarantee? They're that confident in the Daily Fiber Mix used and recommended by a Hollywood celebrity trainer. Right now, the special three-pack bundle has an amazing Black Friday deal, so tap the product link to discover the Hollywood flat-tummy fiber secret!"</div>
+          </div>
+        </details>
+      </div>
     </div>
 
-  </div><!-- /left column -->
-
-  <div class="col">
-  <!-- SHARED BODY (middle) -->
-  <div class="side-card">
-    <h3>Body</h3>
-    <ul>
-      <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-      <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
-      <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
-    </ul>
-  </div>
-  </div>
-
-  <div class="col">
-  <!-- SHARED CTA (right) -->
-  <div class="side-card">
-    <h3>CTA to Use</h3>
-    <p>Every video must mention the <strong>Black Friday offer</strong> and our <strong>satisfaction guarantee</strong>. Choose one CTA and adapt it to your voice.</p>
-    <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
-    <div class="quote"><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</div>
-    <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
-    <div class="quote"><strong>Guarantee angle:</strong> "Can you believe WonderBiotics offers a satisfaction guarantee? They're that confident in the Daily Fiber Mix used and recommended by a Hollywood celebrity trainer. Right now, the special three-pack bundle has an amazing Black Friday deal, so tap the product link to discover the Hollywood flat-tummy fiber secret!"</div>
-  </div>
-  </div>
-
-</div><!-- /cw -->
+  </div><!-- /vgrid -->
 
   <!-- OPTIONAL FORMATS (below must videos) -->
   <div class="side-card" style="margin-top:14px">
