@@ -61,12 +61,12 @@
   .why-grid{display:grid;gap:8px;grid-template-columns:repeat(3,1fr)}
   @media(min-width:720px){.why-grid{gap:14px;grid-template-columns:repeat(3,1fr)}}
   .why{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-  .why img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eee}
+  .why img,.why video{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eee}
   .why .body{padding:9px 10px 12px}
   .why h3{font-size:.72rem;line-height:1.25}
   .why p{font-size:.68rem;line-height:1.35;margin-top:4px}
   @media(min-width:720px){
-    .why img{aspect-ratio:4/5}
+    .why img,.why video{aspect-ratio:4/5}
     .why .body{padding:18px}
     .why h3{font-size:1rem}
     .why p{font-size:.9rem;margin-top:8px}
@@ -163,8 +163,8 @@
   .fold{margin:6px 0}
   .fold summary{cursor:pointer;list-style:none;font-size:.82rem;font-weight:700;color:var(--green-d);background:var(--green-soft);border-radius:10px;padding:9px 12px;display:flex;gap:8px;align-items:center}
   .fold summary::-webkit-details-marker{display:none}
-  .fold summary::before{content:"👇";font-size:.95rem}
-  .fold[open] summary::before{content:"🔽"}
+  .fold summary::before{content:"🖱️";font-size:.95rem}
+  .fold[open] summary::before{content:"🖱️"}
   .fold .quote{margin-top:5px}
   .vbody{background:var(--bg,#f6f7f8);border-radius:12px;padding:12px 14px;margin-top:2px}
   .vbody li{font-size:.86rem;margin-bottom:8px}
@@ -265,21 +265,34 @@
   <h2>Why It's Different</h2>
   <div class="why-grid">
     <div class="why">
-      <img src="assets/why-1.webp" alt="Hollywood celebrity-trainer endorsement" loading="lazy">
+      <video controls preload="metadata" playsinline poster="assets/why-1.webp" src="videos/ref/7689433700164963614.mp4"></video>
       <div class="body">
         <h3>Hollywood celebrity-trainer endorsement</h3>
         <p>Endorsed by a Hollywood celebrity trainer; clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</p>
       </div>
     </div>
     <div class="why">
-      <img src="assets/why-2.webp" alt="Oil-absorption demonstration" loading="lazy">
+      <video controls preload="metadata" playsinline src="videos/oil-demo.mp4"></video>
       <div class="body">
         <h3>Oil-absorption</h3>
         <p>Binds to and carries away oil, easing the greasy, heavy feeling after a meal.</p>
+        <details class="fold">
+          <summary>Easy-Dissolve comparison steps</summary>
+          <div class="note" style="margin-top:6px">
+            <ul>
+              <li><strong>Prepare the water</strong> — Fill two clear glasses with approximately <strong>8 oz of drinking water</strong> each. Do not use too little water. Water at around <strong>60°C / 140°F</strong> is recommended. Do not use ice water or add ice.</li>
+              <li><strong>Open the packets</strong> — Cut open one corner of each packet with scissors. Do not cut straight across the entire top.</li>
+              <li><strong>Add the products gradually</strong> — Pour each powder slowly and continuously into its glass instead of emptying the entire packet at once.</li>
+              <li><strong>Mix and let stand</strong> — Gently swirl each glass, stir with a spoon, or use a shaker cup. Let both mixtures stand for approximately <strong>30 seconds</strong>.</li>
+              <li><strong>Show the final result</strong> — Film both glasses side by side once the water becomes clear, showing the final appearance and texture.</li>
+            </ul>
+            <p style="margin-top:8px">The full Easy-Dissolve comparison clip is provided by the brand team on request — reach out to receive the file.</p>
+          </div>
+        </details>
       </div>
     </div>
     <div class="why">
-      <img src="assets/why-3.webp" alt="Easy to mix, flavorless, no sugar" loading="lazy">
+      <video controls preload="metadata" playsinline src="videos/comparison-solubility.mp4"></video>
       <div class="body">
         <h3>Easy to mix, flavorless, and no sugar like gummies/jelly format</h3>
         <p>Mixes easily, flavorless, no sugar—no extra step in your routine.</p>
