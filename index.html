@@ -58,13 +58,19 @@
   .benefit strong{color:var(--green-d)}
 
   /* ===== Why three columns ===== */
-  .why-grid{display:grid;gap:14px;grid-template-columns:1fr}
-  @media(min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
+  .why-grid{display:grid;gap:8px;grid-template-columns:repeat(3,1fr)}
+  @media(min-width:720px){.why-grid{gap:14px;grid-template-columns:repeat(3,1fr)}}
   .why{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-  .why img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#eee}
-  .why .body{padding:18px}
-  .why h3{font-size:1rem}
-  .why p{font-size:.9rem}
+  .why img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#eee}
+  .why .body{padding:9px 10px 12px}
+  .why h3{font-size:.72rem;line-height:1.25}
+  .why p{font-size:.68rem;line-height:1.35;margin-top:4px}
+  @media(min-width:720px){
+    .why img{aspect-ratio:4/5}
+    .why .body{padding:18px}
+    .why h3{font-size:1rem}
+    .why p{font-size:.9rem;margin-top:8px}
+  }
 
   /* ===== Offer ===== */
   .offer{background:linear-gradient(180deg,#FFF7F0,#FFF);border:1px solid #F3D9C2}
@@ -154,6 +160,12 @@
   .vhook{min-width:0}
   .vsub{font-size:.74rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--green-d);margin:8px 0 4px}
   .vcard .quote{font-size:.84rem;padding:9px 11px;margin:5px 0}
+  .fold{margin:5px 0}
+  .fold summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--ink2);padding:8px 10px;display:flex;gap:8px;align-items:baseline}
+  .fold summary::-webkit-details-marker{display:none}
+  .fold summary::before{content:"▸";color:var(--green-d);font-weight:700}
+  .fold[open] summary::before{content:"▾"}
+  .fold .quote{margin-top:5px}
   .vbody{background:var(--bg,#f6f7f8);border-radius:12px;padding:12px 14px;margin-top:2px}
   .vbody li{font-size:.86rem;margin-bottom:8px}
   .vcta{background:var(--bg,#f6f7f8);border-radius:12px;padding:14px;min-width:0}
@@ -177,7 +189,6 @@
   <div class="wrap">
     <div class="brand">WonderBiotics · TikTok Creator Brief</div>
     <h1>WonderBiotics Daily Fiber Mix — The Hollywood Secret Flat-Tummy Fiber</h1>
-    <p class="sub">Daily Fiber Mix × Hispanic &amp; GenZ — content test brief for creators.</p>
   </div>
 </header>
 
@@ -255,39 +266,23 @@
       <img src="assets/why-1.webp" alt="Hollywood celebrity-trainer endorsement" loading="lazy">
       <div class="body">
         <h3>Hollywood celebrity-trainer endorsement</h3>
-        <p>WonderBiotics partnered with a Hollywood celebrity trainer who uses and recommends Daily Fiber Mix. His clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</p>
+        <p>Endorsed by a Hollywood celebrity trainer; clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</p>
       </div>
     </div>
     <div class="why">
       <img src="assets/why-2.webp" alt="Oil-absorption demonstration" loading="lazy">
       <div class="body">
         <h3>Oil-absorption</h3>
-        <p>Daily Fiber Mix is different from many other fiber products: its fiber can bind to and carry away oil, helping reduce the greasy, heavy feeling after a meal. You can include the oil-absorption demo footage we provide to show this feature.</p>
+        <p>Binds to and carries away oil, easing the greasy, heavy feeling after a meal.</p>
       </div>
     </div>
     <div class="why">
       <img src="assets/why-3.webp" alt="Easy to mix, flavorless, no sugar" loading="lazy">
       <div class="body">
         <h3>Easy to mix, flavorless, and no sugar like gummies/jelly format</h3>
-        <p>Unlike products that can change the taste or texture of what you add them to, Daily Fiber Mix mixes easily into a variety of drinks and foods without adding noticeable flavor. Show how it fits into something you already enjoy, so you can add fiber to your daily routine without creating an extra step.</p>
+        <p>Mixes easily, flavorless, no sugar—no extra step in your routine.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ===== OFFER ===== -->
-<section id="offer">
-  <div class="sec-tag">Black Friday Offer</div>
-  <h2>Black Friday Offer</h2>
-  <div class="card offer">
-    <span class="badge">☀️ BLACK FRIDAY</span>
-    <ul>
-      <li>🛡️ <strong>Lifetime Satisfaction Guarantee</strong> — Only Brand in this category does this. love it, or it's on us. No-questions-asked refund.</li>
-      <li><strong>Recommended: Stock up with the 3-pack</strong></li>
-      <li><strong>Save up to 66% on the 3-pack this Black Friday</strong></li>
-      <li>🎁 <strong>FREE WonderBiotics Brand Tote Bag</strong> with your order, while supplies last</li>
-    </ul>
-    <p class="slogan" style="font-size:.95rem;color:var(--ink2)">*Use the same offer across all videos — keep it consistent.*</p>
   </div>
 </section>
 
@@ -311,14 +306,17 @@
         <div class="vsub">Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</div>
         <p style="font-size:.86rem">Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</p>
         <div class="vsub" style="margin-top:8px">On-screen text options (Pick one to use):</div>
-        <div class="quote">"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</div>
         <div class="quote">"LADY GAGA'S TRAINER WASN'T LYING…"</div>
         <div class="quote">"I found Charlie Puth's flat-stomach secret."</div>
-        <div class="quote">"POV: you found out how to debloat"</div>
-        <div class="quote">"before finding out about debloating / after"</div>
-        <div class="quote">"found the debloat method, u can thank me later..."</div>
-        <div class="quote">"How I'm NEVER bloated"</div>
-        <div class="quote">"taking this everyday now i dont know what bloat is"</div>
+        <details class="fold">
+          <summary>More on-screen text options</summary>
+          <div class="quote">"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</div>
+          <div class="quote">"POV: you found out how to debloat"</div>
+          <div class="quote">"before finding out about debloating / after"</div>
+          <div class="quote">"found the debloat method, u can thank me later..."</div>
+          <div class="quote">"How I'm NEVER bloated"</div>
+          <div class="quote">"taking this everyday now i dont know what bloat is"</div>
+        </details>
         <div class="ex-grid">
           <img src="assets/hook-a1.webp" alt="Reference example A-1" loading="lazy">
           <img src="assets/hook-a2.webp" alt="Reference example A-2" loading="lazy">
@@ -333,7 +331,7 @@
         <div class="vsub">Body</div>
         <ul>
           <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
           <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
         </ul>
       </div>
@@ -355,19 +353,22 @@
       <div class="vhook">
         <div class="vsub">Hook to Use — Reverse-Psychology Hook</div>
         <p style="font-size:.86rem">Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</p>
-        <div class="quote">"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</div>
-        <div class="quote">"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</div>
         <div class="quote">"If you love feeling bloated, keep scrolling—this video isn't for you."</div>
-        <div class="quote">"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</div>
-        <div class="quote">"Don't try this if you're not ready to make fiber part of your daily routine."</div>
-        <div class="quote">"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</div>
+        <div class="quote">"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</div>
+        <details class="fold">
+          <summary>More reverse-psychology hooks</summary>
+          <div class="quote">"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</div>
+          <div class="quote">"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</div>
+          <div class="quote">"Don't try this if you're not ready to make fiber part of your daily routine."</div>
+          <div class="quote">"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</div>
+        </details>
       </div>
 
       <div class="vbody">
         <div class="vsub">Body</div>
         <ul>
           <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
           <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
         </ul>
       </div>
@@ -399,7 +400,7 @@
         <div class="vsub">Body</div>
         <ul>
           <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Mention that each stick contains 6g of fiber—the amount found in about 20 raspberries—and that it's prebiotic fiber. Prebiotic fiber supports the beneficial bacteria in your gut, while fiber helps support regular bowel movements, helping you feel less bloated and support a flatter-looking stomach. Choose the product details that fit your video; you don't need to deliver every benefit in one breath.</li>
+          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
           <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
         </ul>
       </div>
@@ -424,6 +425,22 @@
       <li><strong>Dual-Character Skit</strong> — Play two versions of yourself to show a relatable conversation about fiber, bloating, or finding an easy routine.</li>
     </ul>
     <p class="note" style="margin-top:12px">Not every video needs to follow the exact same sequence. Keep the product, offer, and CTA clear.</p>
+  </div>
+</section>
+
+<!-- ===== OFFER ===== -->
+<section id="offer">
+  <div class="sec-tag">Black Friday Offer</div>
+  <h2>Black Friday Offer</h2>
+  <div class="card offer">
+    <span class="badge">☀️ BLACK FRIDAY</span>
+    <ul>
+      <li>🛡️ <strong>Lifetime Satisfaction Guarantee</strong> — Only Brand in this category does this. love it, or it's on us. No-questions-asked refund.</li>
+      <li><strong>Recommended: Stock up with the 3-pack</strong></li>
+      <li><strong>Save up to 66% on the 3-pack this Black Friday</strong></li>
+      <li>🎁 <strong>FREE WonderBiotics Brand Tote Bag</strong> with your order, while supplies last</li>
+    </ul>
+    <p class="slogan" style="font-size:.95rem;color:var(--ink2)">*Use the same offer across all videos — keep it consistent.*</p>
   </div>
 </section>
 
