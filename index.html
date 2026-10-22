@@ -62,6 +62,7 @@
   @media(min-width:720px){.why-grid{grid-template-columns:repeat(3,1fr)}}
   .why{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
   .why img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#eee}
+  .why img.why-tall{aspect-ratio:auto;object-fit:contain;background:transparent;height:auto}
   .why .body{padding:18px}
   .why h3{font-size:1rem}
   .why p{font-size:.9rem}
@@ -252,9 +253,9 @@
   <h2>Why It's Different</h2>
   <div class="why-grid">
     <div class="why">
-      <img src="assets/why-1.png" alt="Hollywood celebrity-trainer endorsement" loading="lazy">
+      <img src="assets/why-1.png" class="why-tall" alt="Lady Gaga's Trainer Recommends It" loading="lazy">
       <div class="body">
-        <h3>Hollywood celebrity-trainer endorsement</h3>
+        <h3>Lady Gaga's Trainer Recommends It</h3>
         <p>WonderBiotics partnered with a Hollywood celebrity trainer who uses and recommends Daily Fiber Mix. His clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</p>
       </div>
     </div>
