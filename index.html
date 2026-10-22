@@ -92,8 +92,8 @@
   .media{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;max-width:360px;margin:0 auto}
   .media video{display:block;width:100%;height:auto;background:#000;object-fit:contain}
   .media figcaption{font-size:.82rem;color:var(--ink2);padding:10px 14px 0}
-  .actions{display:flex;flex-wrap:wrap;gap:8px;padding:12px 14px 16px}
-  .actions a{flex:1 1 auto;min-width:130px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:999px;padding:10px 12px;font-size:.84rem;font-weight:700;text-decoration:center;text-decoration:none;line-height:1.2}
+  .actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:12px 14px 16px}
+  .actions a{flex:0 0 auto;min-width:0;width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:50%;padding:0;font-size:.84rem;font-weight:700;text-decoration:none;line-height:1}
   .btn-mp4{background:var(--green);color:#fff}
   .btn-mp4:hover{background:var(--green-d)}
   .btn-tk{background:transparent;color:var(--green-d);border:1px solid var(--line)}
@@ -160,11 +160,11 @@
   .vhook{min-width:0}
   .vsub{font-size:.74rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--green-d);margin:8px 0 4px}
   .vcard .quote{font-size:.84rem;padding:9px 11px;margin:5px 0}
-  .fold{margin:5px 0}
-  .fold summary{cursor:pointer;list-style:none;font-size:.8rem;color:var(--ink2);padding:8px 10px;display:flex;gap:8px;align-items:baseline}
+  .fold{margin:6px 0}
+  .fold summary{cursor:pointer;list-style:none;font-size:.82rem;font-weight:700;color:var(--green-d);background:var(--green-soft);border-radius:10px;padding:9px 12px;display:flex;gap:8px;align-items:center}
   .fold summary::-webkit-details-marker{display:none}
-  .fold summary::before{content:"▸";color:var(--green-d);font-weight:700}
-  .fold[open] summary::before{content:"▾"}
+  .fold summary::before{content:"👇";font-size:.95rem}
+  .fold[open] summary::before{content:"🔽"}
   .fold .quote{margin-top:5px}
   .vbody{background:var(--bg,#f6f7f8);border-radius:12px;padding:12px 14px;margin-top:2px}
   .vbody li{font-size:.86rem;margin-bottom:8px}
@@ -174,12 +174,14 @@
   /* ===== Reference compact row ===== */
   .ref-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:760px){.ref-grid{grid-template-columns:repeat(4,1fr)}}
+  .vrefs{grid-column:1/-1;display:grid;gap:12px;grid-template-columns:repeat(2,1fr);margin-top:4px}
+  .vrefs .ref-item video{aspect-ratio:9/16}
   .ref-item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
   .ref-item video{width:100%;aspect-ratio:9/14;object-fit:cover;background:#000;display:block}
   .ref-item figcaption{font-size:.74rem;color:var(--ink2);padding:8px 10px 0;line-height:1.3}
-  .ref-item .actions{display:flex;gap:6px;padding:8px 10px 10px}
-  .ref-item .actions a{flex:1;min-width:0;display:inline-flex;align-items:center;justify-content:center;gap:5px;border-radius:999px;padding:7px 8px;font-size:.74rem;font-weight:700;text-decoration:none;line-height:1.1}
-  .ref-item .actions svg{width:13px;height:13px;flex:0 0 auto}
+  .ref-item .actions{display:flex;gap:8px;justify-content:center;padding:8px 10px 10px}
+  .ref-item .actions a{flex:0 0 auto;min-width:0;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;padding:0;text-decoration:none;line-height:1}
+  .ref-item .actions svg{width:17px;height:17px;flex:0 0 auto}
 </style>
 </head>
 <body>
@@ -340,6 +342,32 @@
         <div class="vsub">CTA to Use</div>
             <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
       </div>
+      <div class="vrefs">
+        <div class="ref-item">
+          <video controls preload="metadata" playsinline src="videos/ref/7689433700164963614.mp4"></video>
+          <figcaption>@harley_pasternak · Harley</figcaption>
+          <div class="actions">
+            <a class="btn-mp4" href="videos/ref/7689433700164963614.mp4" download="reference-harley-pasternak.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+            </a>
+            <a class="btn-tk" href="https://www.tiktok.com/@harley_pasternak/video/7689433700164963614" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="ref-item">
+          <video controls preload="metadata" playsinline src="videos/ref/7669009886310649101.mp4"></video>
+          <figcaption>@zodontmiss</figcaption>
+          <div class="actions">
+            <a class="btn-mp4" href="videos/ref/7669009886310649101.mp4" download="reference-zodontmiss.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+            </a>
+            <a class="btn-tk" href="https://www.tiktok.com/@zodontmiss/video/7669009886310649101" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ===== VIDEO 2 ===== -->
@@ -392,8 +420,11 @@
         <p style="font-size:.86rem">Lead with the Black Friday offer, then show the product and explain what comes with the deal (Pick one to use):</p>
         <div class="quote">"Don't scroll! The special three-pack has an amazing Black Friday deal—don't miss your chance to discover the flat-tummy fiber routine recommended by a Hollywood celebrity trainer!"</div>
         <div class="quote">"Not one, not two, but three full packs! The three-pack bundle has a huge Black Friday deal, so you can stock up on the flat-tummy fiber routine Hollywood stars are turning to—and it's backed by a satisfaction guarantee."</div>
-        <div class="quote">"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</div>
-        <div class="quote">"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</div>
+        <details class="fold">
+          <summary>More discount-first hooks</summary>
+          <div class="quote">"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</div>
+          <div class="quote">"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</div>
+        </details>
       </div>
 
       <div class="vbody">
@@ -475,8 +506,7 @@
     <div class="actions">
       <a class="btn-mp4" href="videos/oil-absorption.mp4" download="oil-absorption-demo.mp4">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-        Download MP4
-      </a>
+        </a>
     </div>
   </div>
 
@@ -502,31 +532,14 @@
   <div class="ref-grid">
 
     <div class="ref-item">
-      <video controls preload="metadata" playsinline src="videos/ref/7689433700164963614.mp4"></video>
-      <figcaption>@harley_pasternak · Harley</figcaption>
-      <div class="actions">
-        <a class="btn-mp4" href="videos/ref/7689433700164963614.mp4" download="reference-harley-pasternak.mp4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
-        </a>
-        <a class="btn-tk" href="https://www.tiktok.com/@harley_pasternak/video/7689433700164963614" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
-        </a>
-      </div>
-    </div>
-
-    <div class="ref-item">
       <video controls preload="metadata" playsinline src="videos/ref/7678902268699102478.mp4"></video>
       <figcaption>@charlieputh · Charlie Puth</figcaption>
       <div class="actions">
         <a class="btn-mp4" href="videos/ref/7678902268699102478.mp4" download="reference-charlie-puth.mp4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
         </a>
         <a class="btn-tk" href="https://www.tiktok.com/@charlieputh/video/7678902268699102478" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
         </a>
       </div>
     </div>
@@ -537,11 +550,9 @@
       <div class="actions">
         <a class="btn-mp4" href="videos/ref/7445243151876377861.mp4" download="reference-eden.mp4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
         </a>
         <a class="btn-tk" href="https://www.tiktok.com/@edenjosephinemangnus/video/7445243151876377861" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
         </a>
       </div>
     </div>
@@ -552,11 +563,9 @@
       <div class="actions">
         <a class="btn-mp4" href="videos/ref/7674414956644814094.mp4" download="reference-elailah.mp4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
         </a>
         <a class="btn-tk" href="https://www.tiktok.com/@theelailah/video/7674414956644814094" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
         </a>
       </div>
     </div>
@@ -567,11 +576,9 @@
       <div class="actions">
         <a class="btn-mp4" href="videos/ref/7652925795547041038.mp4" download="reference-barefoot-plant-mama.mp4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
         </a>
         <a class="btn-tk" href="https://www.tiktok.com/@barefoot.plant.mama/video/7652925795547041038" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
         </a>
       </div>
     </div>
@@ -582,26 +589,9 @@
       <div class="actions">
         <a class="btn-mp4" href="videos/ref/7600463292632468767.mp4" download="reference-anci.mp4">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
         </a>
         <a class="btn-tk" href="https://www.tiktok.com/@anci.social/video/7600463292632468767" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
-        </a>
-      </div>
-    </div>
-
-    <div class="ref-item">
-      <video controls preload="metadata" playsinline src="videos/ref/7669009886310649101.mp4"></video>
-      <figcaption>@zodontmiss</figcaption>
-      <div class="actions">
-        <a class="btn-mp4" href="videos/ref/7669009886310649101.mp4" download="reference-zodontmiss.mp4">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-          Download MP4
-        </a>
-        <a class="btn-tk" href="https://www.tiktok.com/@zodontmiss/video/7669009886310649101" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
-          Watch on TikTok
         </a>
       </div>
     </div>
