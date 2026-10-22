@@ -71,15 +71,17 @@
     .why h3{font-size:1rem}
     .why p{font-size:.9rem;margin-top:8px}
   }
-  /* Mobile: when a steps fold opens, its card spans the full screen width and reads comfortably */
+  /* Mobile: when steps fold opens, keep card 1 & card 3 on the top row, card 2 drops down and expands full-width */
   @media(max-width:719px){
-    .why:has(.fold[open]){grid-column:1/-1}
-    .why:has(.fold[open]) video{aspect-ratio:16/9}
-    .why:has(.fold[open]) .body{padding:14px 14px 18px}
-    .why:has(.fold[open]) h3{font-size:.95rem}
-    .why:has(.fold[open]) p{font-size:.82rem}
-    .why:has(.fold[open]) .note ul{padding-left:18px}
-    .why:has(.fold[open]) .note li{font-size:.84rem;line-height:1.6;margin-bottom:10px}
+    .why-grid:has(.fold[open]) .why:nth-child(1){grid-column:1;grid-row:1}
+    .why-grid:has(.fold[open]) .why:nth-child(3){grid-column:3;grid-row:1}
+    .why-grid:has(.fold[open]) .why:nth-child(2){grid-column:1/-1;grid-row:2}
+    .why-grid:has(.fold[open]) .why:nth-child(2) video{aspect-ratio:16/9}
+    .why-grid:has(.fold[open]) .why:nth-child(2) .body{padding:14px 14px 18px}
+    .why-grid:has(.fold[open]) .why:nth-child(2) h3{font-size:.95rem}
+    .why-grid:has(.fold[open]) .why:nth-child(2) p{font-size:.82rem}
+    .why-grid:has(.fold[open]) .why:nth-child(2) .note ul{padding-left:18px}
+    .why-grid:has(.fold[open]) .why:nth-child(2) .note li{font-size:.84rem;line-height:1.6;margin-bottom:10px}
   }
 
   /* ===== Offer ===== */
@@ -314,7 +316,7 @@
 <!-- ===== CONTENT ===== -->
 <section id="content">
   <div class="sec-tag">Content</div>
-  <h2>Suggested: create <strong>all three required videos</strong>:</h2>
+  <h2>Please create all three suggested videos</h2>
   <p style="margin-bottom:14px;font-size:.95rem">Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</p>
 
   <div class="vgrid">
