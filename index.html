@@ -71,6 +71,16 @@
     .why h3{font-size:1rem}
     .why p{font-size:.9rem;margin-top:8px}
   }
+  /* Mobile: when a steps fold opens, its card spans the full screen width and reads comfortably */
+  @media(max-width:719px){
+    .why:has(.fold[open]){grid-column:1/-1}
+    .why:has(.fold[open]) video{aspect-ratio:16/9}
+    .why:has(.fold[open]) .body{padding:14px 14px 18px}
+    .why:has(.fold[open]) h3{font-size:.95rem}
+    .why:has(.fold[open]) p{font-size:.82rem}
+    .why:has(.fold[open]) .note ul{padding-left:18px}
+    .why:has(.fold[open]) .note li{font-size:.84rem;line-height:1.6;margin-bottom:10px}
+  }
 
   /* ===== Offer ===== */
   .offer{background:linear-gradient(180deg,#FFF7F0,#FFF);border:1px solid #F3D9C2}
@@ -161,10 +171,10 @@
   .vsub{font-size:.74rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--green-d);margin:8px 0 4px}
   .vcard .quote{font-size:.84rem;padding:9px 11px;margin:5px 0}
   .fold{margin:6px 0}
-  .fold summary{cursor:pointer;list-style:none;font-size:.82rem;font-weight:700;color:var(--green-d);background:var(--green-soft);border-radius:10px;padding:9px 12px;display:flex;gap:8px;align-items:center}
+  .fold summary{cursor:pointer;list-style:none;font-size:.82rem;font-weight:700;color:var(--green-d);background:var(--green-soft);border-radius:10px;padding:9px 12px;display:flex;justify-content:space-between;align-items:center;gap:10px}
   .fold summary::-webkit-details-marker{display:none}
-  .fold summary::before{content:"🖱️";font-size:.95rem}
-  .fold[open] summary::before{content:"🖱️"}
+  .fold summary .chev{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--card);color:var(--green-d);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;transition:transform .2s}
+  .fold[open] summary .chev{transform:rotate(90deg)}
   .fold .quote{margin-top:5px}
   .vbody{background:var(--bg,#f6f7f8);border-radius:12px;padding:12px 14px;margin-top:2px}
   .vbody li{font-size:.86rem;margin-bottom:8px}
@@ -272,12 +282,12 @@
       </div>
     </div>
     <div class="why">
-      <video controls preload="metadata" playsinline src="videos/oil-demo.mp4"></video>
+      <video controls preload="metadata" playsinline poster="assets/why-2.webp" data-fallback="assets/why-2.webp" src="videos/oil-demo.mp4"></video>
       <div class="body">
         <h3>Oil-absorption</h3>
         <p>Binds to and carries away oil, easing the greasy, heavy feeling after a meal.</p>
         <details class="fold">
-          <summary>Easy-Dissolve comparison steps</summary>
+          <summary>Easy-Dissolve comparison steps <span class="chev">›</span></summary>
           <div class="note" style="margin-top:6px">
             <ul>
               <li><strong>Prepare the water</strong> — Fill two clear glasses with approximately <strong>8 oz of drinking water</strong> each. Do not use too little water. Water at around <strong>60°C / 140°F</strong> is recommended. Do not use ice water or add ice.</li>
@@ -292,7 +302,7 @@
       </div>
     </div>
     <div class="why">
-      <video controls preload="metadata" playsinline src="videos/comparison-solubility.mp4"></video>
+      <video controls preload="metadata" playsinline poster="assets/why-3.webp" data-fallback="assets/why-3.webp" src="videos/comparison-solubility.mp4"></video>
       <div class="body">
         <h3>Easy to mix, flavorless, and no sugar like gummies/jelly format</h3>
         <p>Mixes easily, flavorless, no sugar—no extra step in your routine.</p>
@@ -304,7 +314,7 @@
 <!-- ===== CONTENT ===== -->
 <section id="content">
   <div class="sec-tag">Content</div>
-  <h2>Please create <strong>all three required videos</strong>:</h2>
+  <h2>Suggested: create <strong>all three required videos</strong>:</h2>
   <p style="margin-bottom:14px;font-size:.95rem">Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</p>
 
   <div class="vgrid">
@@ -324,7 +334,7 @@
         <div class="quote">"LADY GAGA'S TRAINER WASN'T LYING…"</div>
         <div class="quote">"I found Charlie Puth's flat-stomach secret."</div>
         <details class="fold">
-          <summary>More on-screen text options</summary>
+          <summary>More on-screen text options <span class="chev">›</span></summary>
           <div class="quote">"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</div>
           <div class="quote">"POV: you found out how to debloat"</div>
           <div class="quote">"before finding out about debloating / after"</div>
@@ -397,7 +407,7 @@
         <div class="quote">"If you love feeling bloated, keep scrolling—this video isn't for you."</div>
         <div class="quote">"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</div>
         <details class="fold">
-          <summary>More reverse-psychology hooks</summary>
+          <summary>More reverse-psychology hooks <span class="chev">›</span></summary>
           <div class="quote">"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</div>
           <div class="quote">"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</div>
           <div class="quote">"Don't try this if you're not ready to make fiber part of your daily routine."</div>
@@ -434,7 +444,7 @@
         <div class="quote">"Don't scroll! The special three-pack has an amazing Black Friday deal—don't miss your chance to discover the flat-tummy fiber routine recommended by a Hollywood celebrity trainer!"</div>
         <div class="quote">"Not one, not two, but three full packs! The three-pack bundle has a huge Black Friday deal, so you can stock up on the flat-tummy fiber routine Hollywood stars are turning to—and it's backed by a satisfaction guarantee."</div>
         <details class="fold">
-          <summary>More discount-first hooks</summary>
+          <summary>More discount-first hooks <span class="chev">›</span></summary>
           <div class="quote">"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</div>
           <div class="quote">"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</div>
         </details>
@@ -617,6 +627,16 @@
 <footer>
   WonderBiotics Daily Fiber Mix · TikTok Creator Brief · internal reference for creators
 </footer>
+<script>
+document.querySelectorAll('video[data-fallback]').forEach(function(v){
+  v.addEventListener('error', function(){
+    var img=document.createElement('img');
+    img.src=v.getAttribute('data-fallback');
+    img.alt='';
+    v.replaceWith(img);
+  }, {once:true});
+});
+</script>
 </body>
 </html>
 
