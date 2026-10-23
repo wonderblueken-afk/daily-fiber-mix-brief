@@ -32,6 +32,12 @@
   .nav .wrap::-webkit-scrollbar{display:none}
   .nav a{flex:0 0 auto;font-size:.84rem;color:var(--ink2);text-decoration:none;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:#fff;white-space:nowrap}
   .nav a:hover{color:var(--green);border-color:var(--green)}
+  .lang-switch{margin-left:auto;display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:3px;flex:0 0 auto}
+  .lang-switch button{border:0;background:transparent;font-size:.8rem;font-weight:700;color:var(--ink2);padding:4px 11px;border-radius:999px;cursor:pointer;white-space:nowrap}
+  .lang-switch button.active{background:var(--green);color:#fff}
+  .t-en{display:none}
+  [data-lang="en"] .t-en{display:inline}
+  [data-lang="en"] .t-es{display:none}
 
   section{padding:28px 0 4px}
   .sec-tag{font-size:.78rem;font-weight:700;color:var(--green);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
@@ -196,41 +202,44 @@
   .ref-item .actions svg{width:17px;height:17px;flex:0 0 auto}
 </style>
 </head>
-<body>
+<body data-lang="es">
 
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="wrap">
     <div class="brand">WonderBiotics · TikTok Creator Brief</div>
-    <h1>WonderBiotics Daily Fiber Mix — The Hollywood Secret Flat-Tummy Fiber</h1>
+    <h1><span class="t-es">WonderBiotics Daily Fiber Mix — La fibra secreta de Hollywood para un vientre plano</span><span class="t-en" hidden>WonderBiotics Daily Fiber Mix — The Hollywood Secret Flat-Tummy Fiber</span></h1>
   </div>
 </header>
 
 <!-- ===== NAV ===== -->
 <nav class="nav"><div class="wrap">
-  <a href="#about">About</a>
-  <a href="#pack">The Pack</a>
-  <a href="#benefits">Benefits</a>
-  <a href="#why">Why It's Different</a>
+  <a href="#about"><span class="t-es">Sobre nosotros</span><span class="t-en" hidden>About</span></a>
+  <a href="#pack"><span class="t-es">El paquete</span><span class="t-en" hidden>The Pack</span></a>
+  <a href="#benefits"><span class="t-es">Beneficios</span><span class="t-en" hidden>Benefits</span></a>
+  <a href="#why"><span class="t-es">Por qué es diferente</span><span class="t-en" hidden>Why It's Different</span></a>
   <a href="#offer">Black Friday</a>
-  <a href="#content">Required Videos</a>
-  <a href="#rules">Rules</a>
-  <a href="#assets">Assets</a>
-  <a href="#reference">Reference</a>
+  <a href="#content"><span class="t-es">Videos requeridos</span><span class="t-en" hidden>Required Videos</span></a>
+  <a href="#rules"><span class="t-es">Reglas</span><span class="t-en" hidden>Rules</span></a>
+  <a href="#reference"><span class="t-es">Referencia</span><span class="t-en" hidden>Reference</span></a>
+  <div class="lang-switch" role="group" aria-label="Language">
+    <button type="button" data-lang-btn="es" class="active">ES</button>
+    <button type="button" data-lang-btn="en">EN</button>
+  </div>
 </div></nav>
 
 <main class="wrap">
 
 <!-- ===== ABOUT ===== -->
 <section id="about">
-  <div class="sec-tag">About WonderBiotics</div>
+  <div class="sec-tag"><span class="t-es">Sobre WonderBiotics</span><span class="t-en" hidden>About WonderBiotics</span></div>
   <details class="acc">
-    <summary>About WonderBiotics <span class="chev">›</span></summary>
+    <summary><span class="t-es">Sobre WonderBiotics</span><span class="t-en" hidden>About WonderBiotics</span> <span class="chev">›</span></summary>
     <div class="acc-body">
       <ul class="num-list">
-        <li>We are a global, science-led microbiome supplement brand — built on clinical evidence, trusted by <strong>1 billion gut-health moments</strong> worldwide.</li>
-        <li>Every formula is co-created with the world's best minds: leading microbiome scientists, nutritionists, and Hollywood star trainers.</li>
-        <li>Our philosophy goes beyond evidence. Science earns our trust, but it only truly works when it <strong>fits seamlessly into your life</strong>.</li>
+        <li><span class="t-es">Somos una marca global de suplementos microbiológicos basada en la ciencia, construida con evidencia clínica y respaldada por <strong>1.000 millones de momentos de salud intestinal</strong> en todo el mundo.</span><span class="t-en" hidden>We are a global, science-led microbiome supplement brand — built on clinical evidence, trusted by <strong>1 billion gut-health moments</strong> worldwide.</span></li>
+        <li><span class="t-es">Cada fórmula se crea junto con las mejores mentes del mundo: científicos líderes en microbioma, nutricionistas y entrenadores de estrellas de Hollywood.</span><span class="t-en" hidden>Every formula is co-created with the world's best minds: leading microbiome scientists, nutritionists, and Hollywood star trainers.</span></li>
+        <li><span class="t-es">Nuestra filosofía va más allá de la evidencia. La ciencia nos da confianza, pero realmente funciona solo cuando <strong>encaja sin esfuerzo en tu vida</strong>.</span><span class="t-en" hidden>Our philosophy goes beyond evidence. Science earns our trust, but it only truly works when it <strong>fits seamlessly into your life</strong>.</span></li>
       </ul>
     </div>
   </details>
@@ -239,33 +248,33 @@
 
 <!-- ===== PACK + BENEFITS SIDE BY SIDE ===== -->
 <section id="pack">
-  <div class="sec-tag">Daily Fiber Mix Pack · Benefits</div>
+  <div class="sec-tag"><span class="t-es">Paquete Daily Fiber Mix · Beneficios</span><span class="t-en" hidden>Daily Fiber Mix Pack · Benefits</span></div>
   <div class="pb-grid">
     <div class="card pack-card">
       <div class="prod-row">
         <img src="assets/product-fiber.webp" alt="WonderBiotics Daily Fiber Mix product" loading="lazy">
         <div>
-          <h2 style="font-size:1.25rem;margin-bottom:8px">Daily Fiber Mix Pack....</h2>
+          <h2 style="font-size:1.25rem;margin-bottom:8px"><span class="t-es">Paquete Daily Fiber Mix....</span><span class="t-en" hidden>Daily Fiber Mix Pack....</span></h2>
           <a class="shop-btn" href="https://shop.tiktok.com/us/pdp/wonderbiotics-daily-prebiotic-fiber-powder-30-stick-packs/1732349905506177607" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg>
-            View on TikTok Shop
+            <span class="t-es">Ver en TikTok Shop</span><span class="t-en" hidden>View on TikTok Shop</span>
           </a>
         </div>
       </div>
       <ul>
-        <li>A clear, flavorless prebiotic fiber supplement that supports regularity, eases bloating, promotes digestive health, and helps increase fullness—all in one easy daily stick.</li>
-        <li>Each stick contains <strong>4</strong> kinds of prebiotics, <strong>5</strong> kinds of fibers &amp;Superfood adn <strong>6</strong> gram of fibers, —the equivalent of the fiber in <strong>20 raspberries</strong>. It is Non-GMO, Low-FODMAP.</li>
-        <li>Mix one stick into your favorite drink daily for a simple, convenient way to add more fiber to your routine.</li>
+        <li><span class="t-es">Un suplemento de fibra prebiótica claro y sin sabor que favorece la regularidad, alivia la hinchazón, promueve la salud digestiva y ayuda a aumentar la saciedad, todo en un sencillo stick diario.</span><span class="t-en" hidden>A clear, flavorless prebiotic fiber supplement that supports regularity, eases bloating, promotes digestive health, and helps increase fullness—all in one easy daily stick.</span></li>
+        <li><span class="t-es">Cada stick contiene <strong>4</strong> tipos de prebióticos, <strong>5</strong> tipos de fibras y superalimentos, y <strong>6</strong> gramos de fibra, el equivalente a la fibra de <strong>20 frambuesas</strong>. Es No-GMO y bajo en FODMAP.</span><span class="t-en" hidden>Each stick contains <strong>4</strong> kinds of prebiotics, <strong>5</strong> kinds of fibers &amp;Superfood adn <strong>6</strong> gram of fibers, —the equivalent of the fiber in <strong>20 raspberries</strong>. It is Non-GMO, Low-FODMAP.</span></li>
+        <li><span class="t-es">Mezcla un stick en tu bebida favorita cada día para una forma sencilla y cómoda de añadir más fibra a tu rutina.</span><span class="t-en" hidden>Mix one stick into your favorite drink daily for a simple, convenient way to add more fiber to your routine.</span></li>
       </ul>
     </div>
 
     <div id="benefits">
-      <div class="sec-tag">Benefits</div>
+      <div class="sec-tag"><span class="t-es">Beneficios</span><span class="t-en" hidden>Benefits</span></div>
       <div class="benefits">
-        <div class="benefit"><strong>Helps ease</strong> bloating and digestive discomfort, to ensure you have the <strong>flat tummy</strong></div>
-        <div class="benefit"><strong>Supports</strong> regular bowel movements.</div>
-        <div class="benefit"><strong>Promotes</strong> a healthy gut microbiome.</div>
-        <div class="benefit"><strong>Helps increase</strong> fullness and shut the food noise.</div>
+        <div class="benefit"><span class="t-es"><strong>Ayuda a aliviar</strong> la hinchazón y las molestias digestivas, para lograr el <strong>vientre plano</strong></span><span class="t-en" hidden><strong>Helps ease</strong> bloating and digestive discomfort, to ensure you have the <strong>flat tummy</strong></span></div>
+        <div class="benefit"><span class="t-es"><strong>Favorece</strong> las evacuaciones regulares.</span><span class="t-en" hidden><strong>Supports</strong> regular bowel movements.</span></div>
+        <div class="benefit"><span class="t-es"><strong>Promueve</strong> un microbioma intestinal saludable.</span><span class="t-en" hidden><strong>Promotes</strong> a healthy gut microbiome.</span></div>
+        <div class="benefit"><span class="t-es"><strong>Ayuda a aumentar</strong> la saciedad y calma el ruido de la comida.</span><span class="t-en" hidden><strong>Helps increase</strong> fullness and shut the food noise.</span></div>
       </div>
     </div>
   </div>
@@ -273,32 +282,32 @@
 
 <!-- ===== WHY ===== -->
 <section id="why">
-  <div class="sec-tag">Why It's Different</div>
-  <h2>Why It's Different</h2>
+  <div class="sec-tag"><span class="t-es">Por qué es diferente</span><span class="t-en" hidden>Why It's Different</span></div>
+  <h2><span class="t-es">Por qué es diferente</span><span class="t-en" hidden>Why It's Different</span></h2>
   <div class="why-grid">
     <div class="why">
       <video controls preload="metadata" playsinline poster="assets/why-1.webp" src="videos/ref/7689433700164963614.mp4"></video>
       <div class="body">
-        <h3>Hollywood celebrity-trainer endorsement</h3>
-        <p>Endorsed by a Hollywood celebrity trainer; clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</p>
+        <h3><span class="t-es">Avalado por un entrenador de celebridades de Hollywood</span><span class="t-en" hidden>Hollywood celebrity-trainer endorsement</span></h3>
+        <p><span class="t-es">Avalado por un entrenador de celebridades de Hollywood; sus clientes incluyen a Ariana Grande, Charlie Puth, Lady Gaga y Megan Fox.</span><span class="t-en" hidden>Endorsed by a Hollywood celebrity trainer; clients include Ariana Grande, Charlie Puth, Lady Gaga, and Megan Fox.</span></p>
       </div>
     </div>
     <div class="why">
       <video controls preload="metadata" playsinline poster="assets/why-2.webp" data-fallback="assets/why-2.webp" src="videos/oil-demo.mp4"></video>
       <div class="body">
-        <h3>Oil-absorption</h3>
-        <p>Binds to and carries away oil, easing the greasy, heavy feeling after a meal.</p>
+        <h3><span class="t-es">Absorción de aceite</span><span class="t-en" hidden>Oil-absorption</span></h3>
+        <p><span class="t-es">Une y elimina el aceite, aliviando la sensación grasienta y pesada después de comer.</span><span class="t-en" hidden>Binds to and carries away oil, easing the greasy, heavy feeling after a meal.</span></p>
         <details class="fold">
-          <summary>Easy-Dissolve comparison steps <span class="chev">›</span></summary>
+          <summary><span class="t-es">Pasos de la comparación de fácil disolución</span><span class="t-en" hidden>Easy-Dissolve comparison steps</span> <span class="chev">›</span></summary>
           <div class="note" style="margin-top:6px">
             <ul>
-              <li><strong>Prepare the water</strong> — Fill two clear glasses with approximately <strong>8 oz of drinking water</strong> each. Do not use too little water. Water at around <strong>60°C / 140°F</strong> is recommended. Do not use ice water or add ice.</li>
-              <li><strong>Open the packets</strong> — Cut open one corner of each packet with scissors. Do not cut straight across the entire top.</li>
-              <li><strong>Add the products gradually</strong> — Pour each powder slowly and continuously into its glass instead of emptying the entire packet at once.</li>
-              <li><strong>Mix and let stand</strong> — Gently swirl each glass, stir with a spoon, or use a shaker cup. Let both mixtures stand for approximately <strong>30 seconds</strong>.</li>
-              <li><strong>Show the final result</strong> — Film both glasses side by side once the water becomes clear, showing the final appearance and texture.</li>
+              <li><span class="t-es"><strong>Prepara el agua</strong> — Llena dos vasos transparentes con aproximadamente <strong>8 oz de agua potable</strong> cada uno. No uses muy poca agua. Se recomienda agua a unos <strong>60 °C / 140 °F</strong>. No uses agua helada ni agregues hielo.</span><span class="t-en" hidden><strong>Prepare the water</strong> — Fill two clear glasses with approximately <strong>8 oz of drinking water</strong> each. Do not use too little water. Water at around <strong>60°C / 140°F</strong> is recommended. Do not use ice water or add ice.</span></li>
+              <li><span class="t-es"><strong>Abre los sobres</strong> — Corta una esquina de cada sobre con tijeras. No cortes toda la parte superior de punta a punta.</span><span class="t-en" hidden><strong>Open the packets</strong> — Cut open one corner of each packet with scissors. Do not cut straight across the entire top.</span></li>
+              <li><span class="t-es"><strong>Agrega los productos poco a poco</strong> — Vierte cada polvo de forma lenta y continua en su vaso, en lugar de vaciar todo el sobre de una vez.</span><span class="t-en" hidden><strong>Add the products gradually</strong> — Pour each powder slowly and continuously into its glass instead of emptying the entire packet at once.</span></li>
+              <li><span class="t-es"><strong>Mezcla y deja reposar</strong> — Agita suavemente cada vaso, revuélvelo con una cuchara o usa una coctelera. Deja reposar ambas mezclas durante aproximadamente <strong>30 segundos</strong>.</span><span class="t-en" hidden><strong>Mix and let stand</strong> — Gently swirl each glass, stir with a spoon, or use a shaker cup. Let both mixtures stand for approximately <strong>30 seconds</strong>.</span></li>
+              <li><span class="t-es"><strong>Muestra el resultado final</strong> — Graba ambos vasos uno al lado del otro cuando el agua se aclare, mostrando el aspecto y la textura finales.</span><span class="t-en" hidden><strong>Show the final result</strong> — Film both glasses side by side once the water becomes clear, showing the final appearance and texture.</span></li>
             </ul>
-            <p style="margin-top:8px">The full Easy-Dissolve comparison clip is provided by the brand team on request — reach out to receive the file.</p>
+            <p style="margin-top:8px"><span class="t-es">El clip completo de la comparación de fácil disolución lo proporciona el equipo de marca a petición: escríbenos para recibir el archivo.</span><span class="t-en" hidden>The full Easy-Dissolve comparison clip is provided by the brand team on request — reach out to receive the file.</span></p>
           </div>
         </details>
       </div>
@@ -306,8 +315,8 @@
     <div class="why">
       <video controls preload="metadata" playsinline poster="assets/why-3.webp" data-fallback="assets/why-3.webp" src="videos/comparison-solubility.mp4"></video>
       <div class="body">
-        <h3>Easy to mix, flavorless, and no sugar like gummies/jelly format</h3>
-        <p>Mixes easily, flavorless, no sugar—no extra step in your routine.</p>
+        <h3><span class="t-es">Fácil de mezclar, sin sabor y sin azúcar, a diferencia de las gomitas o la jalea</span><span class="t-en" hidden>Easy to mix, flavorless, and no sugar like gummies/jelly format</span></h3>
+        <p><span class="t-es">Se mezcla fácilmente, sin sabor y sin azúcar: sin un paso extra en tu rutina.</span><span class="t-en" hidden>Mixes easily, flavorless, no sugar—no extra step in your routine.</span></p>
       </div>
     </div>
   </div>
@@ -315,9 +324,9 @@
 
 <!-- ===== CONTENT ===== -->
 <section id="content">
-  <div class="sec-tag">Content</div>
-  <h2>Please create all three suggested videos</h2>
-  <p style="margin-bottom:14px;font-size:.95rem">Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</p>
+  <div class="sec-tag"><span class="t-es">Contenido</span><span class="t-en" hidden>Content</span></div>
+  <h2><span class="t-es">Crea los tres videos sugeridos</span><span class="t-en" hidden>Please create all three suggested videos</span></h2>
+  <p style="margin-bottom:14px;font-size:.95rem"><span class="t-es">Revelado de resultado antes/después · Reseña de producto con psicología inversa · Concepto con descuento primero. Para videos adicionales, elige los formatos opcionales de abajo o propón tu propia idea a nuestro equipo para confirmarla antes de grabar.</span><span class="t-en" hidden>Before-and-After Result Reveal · Reverse-Psychology Product Review · Discount-First Concept. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</span></p>
 
   <div class="vgrid">
 
@@ -325,24 +334,24 @@
     <div class="vcard">
       <div class="vhead">
         <span class="no">MUST DO · VIDEO 1</span>
-        <h3>Before-and-After Result Reveal</h3>
-        <p class="role" style="width:100%">Open with a clear, personal before-and-after visual, then share your experience with Daily Fiber Mix and how it fits into your routine.</p>
+        <h3><span class="t-es">Revelado de resultado antes/después</span><span class="t-en" hidden>Before-and-After Result Reveal</span></h3>
+        <p class="role" style="width:100%"><span class="t-es">Abre con una imagen clara y personal de antes/después, luego comparte tu experiencia con Daily Fiber Mix y cómo encaja en tu rutina.</span><span class="t-en" hidden>Open with a clear, personal before-and-after visual, then share your experience with Daily Fiber Mix and how it fits into your routine.</span></p>
       </div>
 
       <div class="vhook">
-        <div class="vsub">Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</div>
-        <p style="font-size:.86rem">Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</p>
-        <div class="vsub" style="margin-top:8px">On-screen text options (Pick one to use):</div>
-        <div class="quote">"LADY GAGA'S TRAINER WASN'T LYING…"</div>
-        <div class="quote">"I found Charlie Puth's flat-stomach secret."</div>
+        <div class="vsub"><span class="t-es">Hook para usar — Antes/después extremo + hook de entrenador de celebridades</span><span class="t-en" hidden>Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Abre con una imagen clara y personal de antes/después, luego usa una referencia breve al entrenador de celebridades para introducir el ángulo de la fibra (Elige una muestra para recrearla).</span><span class="t-en" hidden>Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</span></p>
+        <div class="vsub" style="margin-top:8px"><span class="t-es">Opciones de texto en pantalla (Elige una para usar):</span><span class="t-en" hidden>On-screen text options (Pick one to use):</span></div>
+        <div class="quote"><span class="t-es">"LA ENTRENADORA DE LADY GAGA NO MENTÍA…"</span><span class="t-en" hidden>"LADY GAGA'S TRAINER WASN'T LYING…"</span></div>
+        <div class="quote"><span class="t-es">"Encontré el secreto de vientre plano de Charlie Puth."</span><span class="t-en" hidden>"I found Charlie Puth's flat-stomach secret."</span></div>
         <details class="fold">
-          <summary>More on-screen text options <span class="chev">›</span></summary>
-          <div class="quote">"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</div>
-          <div class="quote">"POV: you found out how to debloat"</div>
-          <div class="quote">"before finding out about debloating / after"</div>
-          <div class="quote">"found the debloat method, u can thank me later..."</div>
-          <div class="quote">"How I'm NEVER bloated"</div>
-          <div class="quote">"taking this everyday now i dont know what bloat is"</div>
+          <summary><span class="t-es">Más opciones de texto en pantalla</span><span class="t-en" hidden>More on-screen text options</span> <span class="chev">›</span></summary>
+          <div class="quote"><span class="t-es">"GRACIAS, ENTRENADORA DE ARIANA GRANDE" / "Agradeciendo a la entrenadora de Ariana Grande después de que por fin me cerraron los jeans"</span><span class="t-en" hidden>"THANK YOU, ARIANA GRANDE'S TRAINER"/ "Me thanking Ariana Grande's trainer after my jeans finally buttoned"</span></div>
+          <div class="quote"><span class="t-es">"POV: descubriste cómo desinflamar"</span><span class="t-en" hidden>"POV: you found out how to debloat"</span></div>
+          <div class="quote"><span class="t-es">"antes de descubrir cómo desinflamar / después"</span><span class="t-en" hidden>"before finding out about debloating / after"</span></div>
+          <div class="quote"><span class="t-es">"encontré el método para desinflamar, ya me agradecerán..."</span><span class="t-en" hidden>"found the debloat method, u can thank me later..."</span></div>
+          <div class="quote"><span class="t-es">"Cómo NUNCA estoy hinchada"</span><span class="t-en" hidden>"How I'm NEVER bloated"</span></div>
+          <div class="quote"><span class="t-es">"tomo esto todos los días, ya no sé qué es la hinchazón"</span><span class="t-en" hidden>"taking this everyday now i dont know what bloat is"</span></div>
         </details>
         <div class="ex-grid">
           <img src="assets/hook-a1.webp" alt="Reference example A-1" loading="lazy">
@@ -355,17 +364,17 @@
       </div>
 
       <div class="vbody">
-        <div class="vsub">Body</div>
+        <div class="vsub"><span class="t-es">Cuerpo</span><span class="t-en" hidden>Body</span></div>
         <ul>
-          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
-          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+          <li><span class="t-es"><strong>Comparte una experiencia personal o un punto de dolor.</strong> Menciona la hinchazón, una sensación pesada, la irregularidad u otra experiencia que encaje con el ángulo elegido. Las imágenes del punto de dolor son opcionales.</span><span class="t-en" hidden><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</span></li>
+          <li><span class="t-es"><strong>Presenta Daily Fiber Mix.</strong> Cada stick tiene 6 g de fibra (unas 20 frambuesas) y fibra prebiótica para apoyar la bacteria intestinal, las evacuaciones regulares, menos hinchazón y un vientre de aspecto más plano.</span><span class="t-en" hidden><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</span></li>
+          <li><span class="t-es"><strong>Muestra un visual relevante del producto.</strong> Mezclalo en una bebida o comida que ya disfrutes. El material del demo de absorción de aceite está disponible y se puede incluir si encaja de forma natural.</span><span class="t-en" hidden><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</span></li>
         </ul>
       </div>
 
       <div class="vcta">
-        <div class="vsub">CTA to Use</div>
-            <div class="quote"><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</div>
+        <div class="vsub"><span class="t-es">CTA para usar</span><span class="t-en" hidden>CTA to Use</span></div>
+            <div class="quote"><span class="t-es"><strong>Ángulo de vientre plano:</strong> "¿Quieres apoyar un vientre de aspecto más plano con un hábito diario sencillo de fibra? Descubre la rutina de fibra para vientre plano recomendada por el entrenador de celebridades de Hollywood. WonderBiotics tiene un paquete triple especial con una increíble oferta de Black Friday, respaldado por la garantía de satisfacción. ¡Toca el carrito amarillo para ver la oferta!"</span><span class="t-en" hidden><strong>Flat-tummy angle:</strong> "Want to support a flatter-looking stomach with an easy daily fiber habit? Discover the flat-tummy fiber routine recommended by the Hollywood celebrity trainer. WonderBiotics has a special three-pack bundle with an amazing Black Friday offer, and it's backed by the satisfaction guarantee. Tap the yellow cart to check out the deal!"</span></div>
       </div>
       <div class="vrefs">
         <div class="ref-item">
@@ -399,36 +408,36 @@
     <div class="vcard">
       <div class="vhead">
         <span class="no">MUST DO · VIDEO 2</span>
-        <h3>Reverse-Psychology Product Review</h3>
-        <p class="role" style="width:100%">Open with a playful warning or mock complaint, then reveal your honest experience with Daily Fiber Mix. Then share its taste, texture, convenience, and the personal benefits you've noticed.</p>
+        <h3><span class="t-es">Reseña de producto con psicología inversa</span><span class="t-en" hidden>Reverse-Psychology Product Review</span></h3>
+        <p class="role" style="width:100%"><span class="t-es">Abre con una advertencia juguetona o una queja simulada, luego revela tu experiencia honesta con Daily Fiber Mix. Después comparte su sabor, textura, comodidad y los beneficios personales que has notado.</span><span class="t-en" hidden>Open with a playful warning or mock complaint, then reveal your honest experience with Daily Fiber Mix. Then share its taste, texture, convenience, and the personal benefits you've noticed.</span></p>
       </div>
 
       <div class="vhook">
-        <div class="vsub">Hook to Use — Reverse-Psychology Hook</div>
-        <p style="font-size:.86rem">Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</p>
-        <div class="quote">"If you love feeling bloated, keep scrolling—this video isn't for you."</div>
-        <div class="quote">"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</div>
+        <div class="vsub"><span class="t-es">Hook para usar — Hook de psicología inversa</span><span class="t-en" hidden>Hook to Use — Reverse-Psychology Hook</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Usa una advertencia juguetona o queja simulada, luego revela la sencilla rutina de fibra detrás de tu video (Elige una para usar):</span><span class="t-en" hidden>Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</span></p>
+        <div class="quote"><span class="t-es">"Si te encanta sentirte hinchado, sigue deslizando: este video no es para ti."</span><span class="t-en" hidden>"If you love feeling bloated, keep scrolling—this video isn't for you."</span></div>
+        <div class="quote"><span class="t-es">"No compres esto, a menos que quieras sentir menos hinchazón y querer cómo se ve tu estómago."</span><span class="t-en" hidden>"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</span></div>
         <details class="fold">
-          <summary>More reverse-psychology hooks <span class="chev">›</span></summary>
-          <div class="quote">"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</div>
-          <div class="quote">"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</div>
-          <div class="quote">"Don't try this if you're not ready to make fiber part of your daily routine."</div>
-          <div class="quote">"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</div>
+          <summary><span class="t-es">Más hooks de psicología inversa</span><span class="t-en" hidden>More reverse-psychology hooks</span> <span class="chev">›</span></summary>
+          <div class="quote"><span class="t-es">"Quiero devolver esto. No porque me ayudó a sentirme menos hinchado. No porque se volvió la parte más fácil de mi rutina matutina…"</span><span class="t-en" hidden>"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</span></div>
+          <div class="quote"><span class="t-es">"Hagas lo que hagas, no le agregues esto a tu café… a menos que quieras una forma más fácil de obtener más fibra."</span><span class="t-en" hidden>"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</span></div>
+          <div class="quote"><span class="t-es">"No pruebes esto si no estás listo para hacer de la fibra parte de tu rutina diaria."</span><span class="t-en" hidden>"Don't try this if you're not ready to make fiber part of your daily routine."</span></div>
+          <div class="quote"><span class="t-es">"Definitivamente no necesitas esto, a menos que quieras una forma sencilla de añadir fibra prebiótica a tu día."</span><span class="t-en" hidden>"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</span></div>
         </details>
       </div>
 
       <div class="vbody">
-        <div class="vsub">Body</div>
+        <div class="vsub"><span class="t-es">Cuerpo</span><span class="t-en" hidden>Body</span></div>
         <ul>
-          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
-          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+          <li><span class="t-es"><strong>Comparte una experiencia personal o un punto de dolor.</strong> Menciona la hinchazón, una sensación pesada, la irregularidad u otra experiencia que encaje con el ángulo elegido. Las imágenes del punto de dolor son opcionales.</span><span class="t-en" hidden><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</span></li>
+          <li><span class="t-es"><strong>Presenta Daily Fiber Mix.</strong> Cada stick tiene 6 g de fibra (unas 20 frambuesas) y fibra prebiótica para apoyar la bacteria intestinal, las evacuaciones regulares, menos hinchazón y un vientre de aspecto más plano.</span><span class="t-en" hidden><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</span></li>
+          <li><span class="t-es"><strong>Muestra un visual relevante del producto.</strong> Mezclalo en una bebida o comida que ya disfrutes. El material del demo de absorción de aceite está disponible y se puede incluir si encaja de forma natural.</span><span class="t-en" hidden><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</span></li>
         </ul>
       </div>
 
       <div class="vcta">
-        <div class="vsub">CTA to Use</div>
-            <div class="quote"><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</div>
+        <div class="vsub"><span class="t-es">CTA para usar</span><span class="t-en" hidden>CTA to Use</span></div>
+            <div class="quote"><span class="t-es"><strong>Ángulo de hinchazón:</strong> "Si la hinchazón te ha estado molestando, es momento de descubrir la rutina de fibra para vientre plano que las estrellas de Hollywood están usando. Mira el paquete triple especial de WonderBiotics con un gran precio de Black Friday. Y si no estás satisfecho, está respaldado por la garantía de satisfacción de WonderBiotics. ¡Toca el enlace del producto para comprar mientras la oferta esté disponible!"</span><span class="t-en" hidden><strong>Bloating angle:</strong> "If bloating has been bothering you, it's time to discover the flat-tummy fiber routine Hollywood stars are turning to. Check out WonderBiotics' special three-pack bundle for a huge Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee. Tap the product link to shop while the offer is available!"</span></div>
       </div>
     </div>
 
@@ -436,34 +445,34 @@
     <div class="vcard">
       <div class="vhead">
         <span class="no">MUST DO · VIDEO 3</span>
-        <h3>Discount-First Concept</h3>
-        <p class="role" style="width:100%">Open with the Black Friday offer, then show the product and explain what comes with the deal.</p>
+        <h3><span class="t-es">Concepto con descuento primero</span><span class="t-en" hidden>Discount-First Concept</span></h3>
+        <p class="role" style="width:100%"><span class="t-es">Abre con la oferta de Black Friday, luego muestra el producto y explica qué incluye la oferta.</span><span class="t-en" hidden>Open with the Black Friday offer, then show the product and explain what comes with the deal.</span></p>
       </div>
 
       <div class="vhook">
-        <div class="vsub">Hook to Use — Discount-First Hook</div>
-        <p style="font-size:.86rem">Lead with the Black Friday offer, then show the product and explain what comes with the deal (Pick one to use):</p>
-        <div class="quote">"Don't scroll! The special three-pack has an amazing Black Friday deal—don't miss your chance to discover the flat-tummy fiber routine recommended by a Hollywood celebrity trainer!"</div>
-        <div class="quote">"Not one, not two, but three full packs! The three-pack bundle has a huge Black Friday deal, so you can stock up on the flat-tummy fiber routine Hollywood stars are turning to—and it's backed by a satisfaction guarantee."</div>
+        <div class="vsub"><span class="t-es">Hook para usar — Hook con descuento primero</span><span class="t-en" hidden>Hook to Use — Discount-First Hook</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Empieza con la oferta de Black Friday, luego muestra el producto y explica qué incluye la oferta (Elige una para usar):</span><span class="t-en" hidden>Lead with the Black Friday offer, then show the product and explain what comes with the deal (Pick one to use):</span></p>
+        <div class="quote"><span class="t-es">"¡No deslices! El paquete triple especial tiene una increíble oferta de Black Friday: no pierdas tu oportunidad de descubrir la rutina de fibra para vientre plano recomendada por un entrenador de celebridades de Hollywood."</span><span class="t-en" hidden>"Don't scroll! The special three-pack has an amazing Black Friday deal—don't miss your chance to discover the flat-tummy fiber routine recommended by a Hollywood celebrity trainer!"</span></div>
+        <div class="quote"><span class="t-es">"¡Ni uno, ni dos, sino tres paquetes completos! El paquete triple tiene una gran oferta de Black Friday, para que puedas abastecerte de la rutina de fibra para vientre plano que las estrellas de Hollywood están usando, respaldada por una garantía de satisfacción."</span><span class="t-en" hidden>"Not one, not two, but three full packs! The three-pack bundle has a huge Black Friday deal, so you can stock up on the flat-tummy fiber routine Hollywood stars are turning to—and it's backed by a satisfaction guarantee."</span></div>
         <details class="fold">
-          <summary>More discount-first hooks <span class="chev">›</span></summary>
-          <div class="quote">"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</div>
-          <div class="quote">"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</div>
+          <summary><span class="t-es">Más hooks con descuento primero</span><span class="t-en" hidden>More discount-first hooks</span> <span class="chev">›</span></summary>
+          <div class="quote"><span class="t-es">"Así es: 90 sticks, aproximadamente para tres meses, con una oferta especial de Black Friday: tres meses para hacer este secreto de fibra para vientre plano de Hollywood parte de tu rutina diaria."</span><span class="t-en" hidden>"hat's right: 90 sticks, about a three-month supply, with a special Black Friday deal—three months to make this Hollywood flat-tummy fiber secret part of your daily routine!"</span></div>
+          <div class="quote"><span class="t-es">"Tres paquetes completos, una oferta especial de Black Friday y la rutina de fibra para vientre plano recomendada por un entrenador de celebridades de Hollywood. ¡Toca para ver la oferta antes de que se agote!"</span><span class="t-en" hidden>"Three full packs, one special Black Friday offer, and the flat-tummy fiber routine recommended by a Hollywood celebrity trainer. Tap to check out the deal before it's gone!"</span></div>
         </details>
       </div>
 
       <div class="vbody">
-        <div class="vsub">Body</div>
+        <div class="vsub"><span class="t-es">Cuerpo</span><span class="t-en" hidden>Body</span></div>
         <ul>
-          <li><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</li>
-          <li><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</li>
-          <li><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</li>
+          <li><span class="t-es"><strong>Comparte una experiencia personal o un punto de dolor.</strong> Menciona la hinchazón, una sensación pesada, la irregularidad u otra experiencia que encaje con el ángulo elegido. Las imágenes del punto de dolor son opcionales.</span><span class="t-en" hidden><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</span></li>
+          <li><span class="t-es"><strong>Presenta Daily Fiber Mix.</strong> Cada stick tiene 6 g de fibra (unas 20 frambuesas) y fibra prebiótica para apoyar la bacteria intestinal, las evacuaciones regulares, menos hinchazón y un vientre de aspecto más plano.</span><span class="t-en" hidden><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</span></li>
+          <li><span class="t-es"><strong>Muestra un visual relevante del producto.</strong> Mezclalo en una bebida o comida que ya disfrutes. El material del demo de absorción de aceite está disponible y se puede incluir si encaja de forma natural.</span><span class="t-en" hidden><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</span></li>
         </ul>
       </div>
 
       <div class="vcta">
-        <div class="vsub">CTA to Use</div>
-            <div class="quote"><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</div>
+        <div class="vsub"><span class="t-es">CTA para usar</span><span class="t-en" hidden>CTA to Use</span></div>
+            <div class="quote"><span class="t-es"><strong>Ángulo de descuento:</strong> "¿Quieres la rutina de fibra para vientre plano recomendada por un entrenador de celebridades de Hollywood? WonderBiotics tiene un paquete triple especial con una increíble oferta de Black Friday. Y si no estás satisfecho, está respaldado por la garantía de satisfacción de WonderBiotics, para que puedas comprar con confianza. <strong>¡Toca el carrito amarillo para obtener la misma fibra para vientre plano recomendada a las estrellas de Hollywood!</strong>"</span><span class="t-en" hidden><strong>Discount angle:</strong> "Want the flat-tummy fiber routine recommended by a Hollywood celebrity trainer? WonderBiotics has a special three-pack bundle with an amazing Black Friday deal. And if you're not satisfied, it's backed by WonderBiotics' satisfaction guarantee—so you can shop with confidence. <strong>Tap the yellow cart to get the same flat-tummy fiber recommended by a trainer to Hollywood stars!</strong>"</span></div>
       </div>
     </div>
 
@@ -471,89 +480,59 @@
 
   <!-- OPTIONAL FORMATS (below must videos) -->
   <div class="side-card" style="margin-top:14px">
-    <h3>Optional Formats</h3>
+    <h3><span class="t-es">Formatos opcionales</span><span class="t-en" hidden>Optional Formats</span></h3>
     <ul class="opt-list">
-      <li><strong>Reaction Video — Duet / Stitch</strong> — React to a fiber trend, celebrity-trainer recommendation, or gut-health conversation, then share your perspective and introduce Daily Fiber Mix.</li>
-      <li><strong>Everyday Coffee Routine / GRWM</strong> — Show how you mix Daily Fiber Mix into a drink that's already part of your daily routine.</li>
-      <li><strong>Pop-Culture &amp; Seasonal Gift Angle</strong> — Tie the video to a relevant pop-culture moment or seasonal occasion. For Thanksgiving or Christmas, you can also present Daily Fiber Mix as a thoughtful wellness gift for someone who wants an easy way to add fiber to their routine.</li>
-      <li><strong>Ingredient Comparison</strong> — Compare Daily Fiber Mix's ingredients or format with other types of fiber products, keeping the comparison accurate and based on verifiable information.</li>
-      <li><strong>Pain-Point Breakdown</strong> — Talk through a relatable concern, such as bloating or irregularity, and explain how adding fiber can fit into your routine.</li>
-      <li><strong>Dual-Character Skit</strong> — Play two versions of yourself to show a relatable conversation about fiber, bloating, or finding an easy routine.</li>
+      <li><span class="t-es"><strong>Video de reacción — Dueto / Stitch</strong> — Reacciona a una tendencia de fibra, una recomendación de entrenador de celebridades o una conversación sobre salud intestinal, luego comparte tu perspectiva y presenta Daily Fiber Mix.</span><span class="t-en" hidden><strong>Reaction Video — Duet / Stitch</strong> — React to a fiber trend, celebrity-trainer recommendation, or gut-health conversation, then share your perspective and introduce Daily Fiber Mix.</span></li>
+      <li><span class="t-es"><strong>Rutina diaria de café / GRWM</strong> — Muestra cómo mezclas Daily Fiber Mix en una bebida que ya forma parte de tu rutina diaria.</span><span class="t-en" hidden><strong>Everyday Coffee Routine / GRWM</strong> — Show how you mix Daily Fiber Mix into a drink that's already part of your daily routine.</span></li>
+      <li><span class="t-es"><strong>Ángulo de cultura pop y regalo de temporada</strong> — Vincula el video a un momento relevante de la cultura pop o una ocasión estacional. Para Acción de Gracias o Navidad, también puedes presentar Daily Fiber Mix como un regalo de bienestar considerado para alguien que quiera una forma fácil de añadir fibra a su rutina.</span><span class="t-en" hidden><strong>Pop-Culture &amp; Seasonal Gift Angle</strong> — Tie the video to a relevant pop-culture moment or seasonal occasion. For Thanksgiving or Christmas, you can also present Daily Fiber Mix as a thoughtful wellness gift for someone who wants an easy way to add fiber to their routine.</span></li>
+      <li><span class="t-es"><strong>Comparación de ingredientes</strong> — Compara los ingredientes o el formato de Daily Fiber Mix con otros tipos de productos de fibra, manteniendo la comparación precisa y basada en información verificable.</span><span class="t-en" hidden><strong>Ingredient Comparison</strong> — Compare Daily Fiber Mix's ingredients or format with other types of fiber products, keeping the comparison accurate and based on verifiable information.</span></li>
+      <li><span class="t-es"><strong>Desglose del punto de dolor</strong> — Habla de una preocupación cercana, como la hinchazón o la irregularidad, y explica cómo añadir fibra puede encajar en tu rutina.</span><span class="t-en" hidden><strong>Pain-Point Breakdown</strong> — Talk through a relatable concern, such as bloating or irregularity, and explain how adding fiber can fit into your routine.</span></li>
+      <li><span class="t-es"><strong>Sketch de doble personaje</strong> — Interpreta dos versiones de ti mismo para mostrar una conversación cercana sobre la fibra, la hinchazón o cómo encontrar una rutina sencilla.</span><span class="t-en" hidden><strong>Dual-Character Skit</strong> — Play two versions of yourself to show a relatable conversation about fiber, bloating, or finding an easy routine.</span></li>
     </ul>
-    <p class="note" style="margin-top:12px">Not every video needs to follow the exact same sequence. Keep the product, offer, and CTA clear.</p>
+    <p class="note" style="margin-top:12px"><span class="t-es">No todo video necesita seguir la misma secuencia exacta. Mantén claros el producto, la oferta y el CTA.</span><span class="t-en" hidden>Not every video needs to follow the exact same sequence. Keep the product, offer, and CTA clear.</span></p>
   </div>
 </section>
 
 <!-- ===== OFFER ===== -->
 <section id="offer">
-  <div class="sec-tag">Black Friday Offer</div>
-  <h2>Black Friday Offer</h2>
+  <div class="sec-tag"><span class="t-es">Oferta de Black Friday</span><span class="t-en" hidden>Black Friday Offer</span></div>
+  <h2><span class="t-es">Oferta de Black Friday</span><span class="t-en" hidden>Black Friday Offer</span></h2>
   <div class="card offer">
     <span class="badge">☀️ BLACK FRIDAY</span>
     <ul>
-      <li>🛡️ <strong>Lifetime Satisfaction Guarantee</strong> — Only Brand in this category does this. love it, or it's on us. No-questions-asked refund.</li>
-      <li><strong>Recommended: Stock up with the 3-pack</strong></li>
-      <li><strong>Save up to 66% on the 3-pack this Black Friday</strong></li>
-      <li>🎁 <strong>FREE WonderBiotics Brand Tote Bag</strong> with your order, while supplies last</li>
+      <li><span class="t-es">🛡️ <strong>Garantía de satisfacción de por vida</strong> — Única marca en esta categoría que lo hace. Si te encanta, es nuestro regalo. Reembolso sin preguntas.</span><span class="t-en" hidden>🛡️ <strong>Lifetime Satisfaction Guarantee</strong> — Only Brand in this category does this. love it, or it's on us. No-questions-asked refund.</span></li>
+      <li><span class="t-es"><strong>Recomendado: abastécete con el paquete triple</strong></span><span class="t-en" hidden><strong>Recommended: Stock up with the 3-pack</strong></span></li>
+      <li><span class="t-es"><strong>Ahorra hasta un 66% en el paquete triple este Black Friday</strong></span><span class="t-en" hidden><strong>Save up to 66% on the 3-pack this Black Friday</strong></span></li>
+      <li><span class="t-es">🎁 <strong>Bolso de marca WonderBiotics GRATIS</strong> con tu pedido, hasta agotar existencias</span><span class="t-en" hidden>🎁 <strong>FREE WonderBiotics Brand Tote Bag</strong> with your order, while supplies last</span></li>
     </ul>
-    <p class="slogan" style="font-size:.95rem;color:var(--ink2)">*Use the same offer across all videos — keep it consistent.*</p>
+    <p class="slogan" style="font-size:.95rem;color:var(--ink2)"><span class="t-es">*Usa la misma oferta en todos los videos: manténla coherente.*</span><span class="t-en" hidden>*Use the same offer across all videos — keep it consistent.*</span></p>
   </div>
 </section>
 
 <!-- ===== RULES ===== -->
 <section id="rules">
-  <div class="sec-tag">Must-Haves &amp; Creator Rules</div>
-  <h2>Must-Haves &amp; Creator Rules</h2>
+  <div class="sec-tag"><span class="t-es">Elementos imprescindibles y reglas del creador</span><span class="t-en" hidden>Must-Haves &amp; Creator Rules</span></div>
+  <h2><span class="t-es">Elementos imprescindibles y reglas del creador</span><span class="t-en" hidden>Must-Haves &amp; Creator Rules</span></h2>
   <div class="card">
     <ul>
-      <li>Show Daily Fiber Mix and how you use it in a familiar drink.</li>
-      <li>Include the Black Friday three-pack offer, tote-bag offer, and satisfaction guarantee in the video.</li>
-      <li>Frame benefits as your personal experience; individual results may vary.</li>
-      <li>Tag <strong>@wonderbiotics.us</strong> on TikTok.</li>
-      <li>Include these hashtags: <span class="tag-inline">#WonderBiotics</span> <span class="tag-inline">#fyp</span> <span class="tag-inline">#debloat</span> <span class="tag-inline">#tiktokshopblackfriday</span> <span class="tag-inline">#BFCM</span></li>
-      <li>Add a caption prompt that invites conversation. For example: <strong>"What's your usual morning drink—coffee, tea, or something else?"</strong></li>
-      <li>Publish the final video within <strong>14 days</strong> of receiving the product sample.</li>
-      <li>After publishing, send the brand team the <strong>180-day ad authorization code</strong> for the video.</li>
+      <li><span class="t-es">Muestra Daily Fiber Mix y cómo lo usas en una bebida familiar.</span><span class="t-en" hidden>Show Daily Fiber Mix and how you use it in a familiar drink.</span></li>
+      <li><span class="t-es">Incluye en el video la oferta del paquete triple de Black Friday, la oferta del bolso y la garantía de satisfacción.</span><span class="t-en" hidden>Include the Black Friday three-pack offer, tote-bag offer, and satisfaction guarantee in the video.</span></li>
+      <li><span class="t-es">Presenta los beneficios como tu experiencia personal; los resultados individuales pueden variar.</span><span class="t-en" hidden>Frame benefits as your personal experience; individual results may vary.</span></li>
+      <li><span class="t-es">Etiqueta <strong>@wonderbiotics.us</strong> en TikTok.</span><span class="t-en" hidden>Tag <strong>@wonderbiotics.us</strong> on TikTok.</span></li>
+      <li><span class="t-es">Incluye estos hashtags:</span><span class="t-en" hidden>Include these hashtags:</span> <span class="tag-inline">#WonderBiotics</span> <span class="tag-inline">#fyp</span> <span class="tag-inline">#debloat</span> <span class="tag-inline">#tiktokshopblackfriday</span> <span class="tag-inline">#BFCM</span></li>
+      <li><span class="t-es">Añade una indicación en el pie de foto que invite a la conversación. Por ejemplo: <strong>"¿Cuál es tu bebida matutina habitual: café, té u otra cosa?"</strong></span><span class="t-en" hidden>Add a caption prompt that invites conversation. For example: <strong>"What's your usual morning drink—coffee, tea, or something else?"</strong></span></li>
+      <li><span class="t-es">Publica el video final dentro de los <strong>14 días</strong> de recibir la muestra del producto.</span><span class="t-en" hidden>Publish the final video within <strong>14 days</strong> of receiving the product sample.</span></li>
+      <li><span class="t-es">Tras publicar, envía al equipo de marca el <strong>código de autorización publicitaria de 180 días</strong> del video.</span><span class="t-en" hidden>After publishing, send the brand team the <strong>180-day ad authorization code</strong> for the video.</span></li>
     </ul>
   </div>
 </section>
 
-<!-- ===== ASSETS ===== -->
-<section id="assets">
-  <div class="sec-tag">Available Video Asset</div>
-  <h2>Available Video Asset</h2>
-
-  <h3 style="margin-top:8px">1. Oil-Absorption Demo</h3>
-  <p>Daily Fiber Mix can bind to and carry away oil, helping reduce the greasy, heavy feeling after a meal. The provided oil-absorption demo can be inserted into your video wherever it fits naturally with your storyline.</p>
-  <div class="media" style="margin:14px auto">
-    <video controls preload="metadata" playsinline src="videos/oil-absorption.mp4"></video>
-    <figcaption>Oil-Absorption Demo — provided by brand team</figcaption>
-    <div class="actions">
-      <a class="btn-mp4" href="videos/oil-absorption.mp4" download="oil-absorption-demo.mp4">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
-        </a>
-    </div>
-  </div>
-
-  <h3 style="margin-top:28px">2. Easy-Dissolve Comparison</h3>
-  <p>We provide footage comparing the dissolvability of <strong>Daily Fiber Mix and Metamucil</strong>. You can include this footage in your video when it fits your concept. If you prefer to recreate the comparison yourself, follow the steps below:</p>
-  <div class="note">
-    <ul>
-      <li><strong>Prepare the water</strong> — Fill two clear glasses with approximately <strong>8 oz of drinking water</strong> each. Do not use too little water. Water at around <strong>60°C / 140°F</strong> is recommended. Do not use ice water or add ice.</li>
-      <li><strong>Open the packets</strong> — Cut open one corner of each packet with scissors. Do not cut straight across the entire top.</li>
-      <li><strong>Add the products gradually</strong> — Pour each powder slowly and continuously into its glass instead of emptying the entire packet at once.</li>
-      <li><strong>Mix and let stand</strong> — Gently swirl each glass, stir with a spoon, or use a shaker cup. Let both mixtures stand for approximately <strong>30 seconds</strong>.</li>
-      <li><strong>Show the final result</strong> — Film both glasses side by side once the water becomes clear, showing the final appearance and texture.</li>
-    </ul>
-    <p style="margin-top:10px">The full Easy-Dissolve comparison clip is provided by the brand team on request — reach out to receive the file.</p>
-  </div>
-</section>
 
 <!-- ===== REFERENCE ===== -->
 <section id="reference">
-  <div class="sec-tag">Reference</div>
-  <h2>Reference</h2>
-  <p style="margin-bottom:16px">Reference videos — tap to play, download the MP4, or open the original on TikTok.</p>
+  <div class="sec-tag"><span class="t-es">Referencia</span><span class="t-en" hidden>Reference</span></div>
+  <h2><span class="t-es">Referencia</span><span class="t-en" hidden>Reference</span></h2>
+  <p style="margin-bottom:16px"><span class="t-es">Videos de referencia: toca para reproducir, descarga el MP4 o abre el original en TikTok.</span><span class="t-en" hidden>Reference videos — tap to play, download the MP4, or open the original on TikTok.</span></p>
   <div class="ref-grid">
 
     <div class="ref-item">
@@ -627,7 +606,7 @@
 </main>
 
 <footer>
-  WonderBiotics Daily Fiber Mix · TikTok Creator Brief · internal reference for creators
+  <span class="t-es">WonderBiotics Daily Fiber Mix · Brief de creadores de TikTok · referencia interna para creadores</span><span class="t-en" hidden>WonderBiotics Daily Fiber Mix · TikTok Creator Brief · internal reference for creators</span>
 </footer>
 <script>
 document.querySelectorAll('video[data-fallback]').forEach(function(v){
@@ -638,6 +617,24 @@ document.querySelectorAll('video[data-fallback]').forEach(function(v){
     v.replaceWith(img);
   }, {once:true});
 });
+
+// Language switcher: default ES, toggle EN
+(function(){
+  var btns=document.querySelectorAll('[data-lang-btn]');
+  function setLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    btns.forEach(function(b){
+      b.classList.toggle('active', b.getAttribute('data-lang-btn')===lang);
+    });
+    try{ localStorage.setItem('fiber-lang', lang); }catch(e){}
+  }
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.getAttribute('data-lang-btn')); });
+  });
+  var saved='es';
+  try{ saved=localStorage.getItem('fiber-lang')||'es'; }catch(e){}
+  setLang(saved==='en'?'en':'es');
+})();
 </script>
 </body>
 </html>
