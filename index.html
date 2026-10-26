@@ -203,9 +203,34 @@
   .ref-item .actions{display:flex;gap:8px;justify-content:center;padding:8px 10px 10px}
   .ref-item .actions a{flex:0 0 auto;min-width:0;width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;padding:0;text-decoration:none;line-height:1}
   .ref-item .actions svg{width:17px;height:17px;flex:0 0 auto}
+
+  /* ===== Challenge banner ===== */
+  .chal-banner{display:flex;align-items:center;gap:12px;padding:9px 16px;background:linear-gradient(100deg,#1F7A4F,#2F9D6B 60%,#E8833A);color:#fff;overflow:hidden}
+  .chal-scroll{flex:1;min-width:0;overflow:hidden;white-space:nowrap;position:relative}
+  .chal-track{display:inline-block;white-space:nowrap;animation:chalmarq 16s linear infinite;will-change:transform}
+  .chal-track span{display:inline-block;font-size:.84rem;font-weight:700;letter-spacing:.01em;padding-right:56px}
+  @keyframes chalmarq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .chal-btn{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:800;color:#1F7A4F;background:#fff;border-radius:999px;padding:8px 16px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,.2);white-space:nowrap;transition:transform .15s ease}
+  .chal-btn:hover{transform:translateY(-1px)}
+  .chal-btn svg{width:14px;height:14px}
+  @media(max-width:520px){.chal-banner{gap:8px;padding:8px 10px}.chal-btn{font-size:.72rem;padding:7px 12px}.chal-track span{font-size:.76rem;padding-right:36px}}
 </style>
 </head>
 <body data-lang="es">
+
+<!-- ===== CHALLENGE BANNER ===== -->
+<div class="chal-banner">
+  <div class="chal-scroll">
+    <div class="chal-track">
+      <span class="t-es">¡Nuestro reto de noviembre Wonder Earners ya está abierto! Gana recompensas en efectivo + comisión extra de hasta 45%. ¡Más videos, más dinero!</span><span class="t-en" hidden>Our November Wonder Earners challenge is LIVE! Earn cash rewards + bonus commission up to 45%. More videos, more money!</span>
+      <span class="t-es">¡Nuestro reto de noviembre Wonder Earners ya está abierto! Gana recompensas en efectivo + comisión extra de hasta 45%. ¡Más videos, más dinero!</span><span class="t-en" hidden>Our November Wonder Earners challenge is LIVE! Earn cash rewards + bonus commission up to 45%. More videos, more money!</span>
+    </div>
+  </div>
+  <a class="chal-btn" href="https://wonderblueken-afk.github.io/wonder-earners-challenge/" target="_blank" rel="noopener">
+    <span class="t-es">Únete al reto</span><span class="t-en" hidden>Join the Challenge</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></svg>
+  </a>
+</div>
 
 <!-- ===== HERO ===== -->
 <header class="hero">
