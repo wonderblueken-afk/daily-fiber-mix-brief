@@ -141,6 +141,32 @@
     .hero{padding:64px 0 32px}
     .card,.concept,.script,.why .body{padding:16px}
   }
+
+  /* ===== YouTube source material ===== */
+  .yt-ref{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin:0 0 18px}
+  .yt-kicker{font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+  .yt-ref h3{font-size:1.02rem;font-weight:800;letter-spacing:-.01em;margin:0 0 6px;line-height:1.32}
+  .yt-ref .yt-sub{font-size:.84rem;color:var(--ink2);margin-bottom:12px;line-height:1.5}
+  .yt-player{position:relative;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;overflow:hidden;cursor:pointer;border:1px solid var(--line)}
+  .yt-player img{width:100%;height:100%;object-fit:cover;display:block}
+  .yt-play{position:absolute;inset:0;display:grid;place-items:center;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.32))}
+  .yt-play span{width:60px;height:60px;border-radius:50%;background:rgba(0,0,0,.66);color:#fff;display:grid;place-items:center;font-size:1.05rem;box-shadow:0 6px 18px rgba(0,0,0,.3);transition:background .15s ease}
+  .yt-player:hover .yt-play span{background:var(--green)}
+  .yt-frame{position:absolute;inset:0}
+  .yt-frame iframe{width:100%;height:100%;border:0;display:block}
+  .yt-player.playing{cursor:default}
+  .yt-player.playing .yt-play,.yt-player.playing img{display:none}
+  .yt-meta{display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center;font-size:.78rem;color:var(--ink2);margin-top:9px}
+  .yt-meta a{color:var(--green-d);font-weight:700;text-decoration:none}
+  .yt-meta a:hover{text-decoration:underline}
+  .yt-cites{display:flex;flex-direction:column;gap:8px;margin-top:13px}
+  .yt-cite{display:flex;gap:10px;align-items:flex-start;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+  .yt-cite .q{flex:1;font-size:.85rem;line-height:1.5;color:var(--ink)}
+  .yt-cite .q .stamp{display:inline-block;font-size:.72rem;font-weight:800;color:var(--green-d);background:var(--green-soft);border-radius:999px;padding:1px 7px;margin-left:4px;white-space:nowrap}
+  .yt-ts{flex:0 0 auto;align-self:center;font-size:.78rem;font-weight:800;color:var(--green-d);text-decoration:none;border:1px solid var(--green);border-radius:999px;padding:5px 11px;white-space:nowrap}
+  .yt-ts:hover{background:var(--green-soft)}
+  .yt-note{font-size:.74rem;color:var(--ink3);margin-top:10px;line-height:1.45}
+  @media(max-width:560px){.yt-cite{flex-direction:column;gap:8px}.yt-ts{align-self:flex-start}.yt-player .yt-play span{width:50px;height:50px}}
 </style>
 </head>
 <body>
@@ -399,6 +425,38 @@
   </div>
 </section>
 
+<!-- ===== REFERENCE ===== -->
+<section id="reference">
+  <div class="sec-tag">Reference</div>
+  <h2>Reference</h2>
+  <p style="margin-bottom:16px">Source material behind this brief &mdash; the cited YouTube moments play right here in the page.</p>
+  <div class="yt-ref">
+    <div class="yt-kicker">Source material &middot; YouTube</div>
+    <h3>Harley Pasternak on breakfast, fiber and his daily routine</h3>
+    <p class="yt-sub">Tap the cover to play the interview inside this page. The two cited moments below jump the player straight to that timestamp.</p>
+    <div class="yt-player" data-vid="-K3s9Hu6kis" data-start="665">
+      <img src="assets/yt-harley-1.jpg" alt="Harley Pasternak interview on YouTube" loading="lazy">
+      <div class="yt-frame"></div>
+      <span class="yt-play" aria-hidden="true"><span>&#9654;</span></span>
+    </div>
+    <div class="yt-meta">
+      <span>Well with Arielle Lorre &middot; Harley Pasternak</span>
+      <a href="https://www.youtube.com/watch?v=-K3s9Hu6kis&amp;t=665s" target="_blank" rel="noopener">Watch on YouTube &#8599;</a>
+    </div>
+    <div class="yt-cites">
+      <div class="yt-cite">
+        <div class="q">&ldquo;Fiber is everything.&rdquo; &mdash; on why breakfast has to be nutrition-first. <span class="stamp">10:24</span></div>
+        <a class="yt-ts" href="https://www.youtube.com/watch?v=EBqNBPO9JyM&amp;t=624" data-vid="EBqNBPO9JyM" data-start="624" data-cover="assets/yt-harley-2.jpg">Play 10:24</a>
+      </div>
+      <div class="yt-cite">
+        <div class="q">On his own daily diet (including his healthy pancake) he says he adds a Wonderbiotics fiber stick to his coffee or to his food. <span class="stamp">11:05</span></div>
+        <a class="yt-ts" href="https://www.youtube.com/watch?v=EBqNBPO9JyM&amp;t=665" data-vid="EBqNBPO9JyM" data-start="665" data-cover="assets/yt-harley-2.jpg">Play 11:05</a>
+      </div>
+    </div>
+    <p class="yt-note">Timestamps taken from the Dr. Stephanie Estima interview. The links open the original YouTube video at the cited minute.</p>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -410,6 +468,33 @@
     <div>TikTok Creator Brief · For creator use only</div>
   </div>
 </footer>
+
+
+<script>
+(function(){
+  var wrap = document.querySelector('.yt-player');
+  if(!wrap) return;
+  var img = wrap.querySelector('img');
+  var frame = wrap.querySelector('.yt-frame');
+  function play(id, start, cover){
+    if(cover && img) img.src = cover;
+    frame.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id + '?start=' + start +
+      '&autoplay=1&rel=0&modestbranding=1" title="YouTube reference" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    wrap.classList.add('playing');
+  }
+  wrap.addEventListener('click', function(){
+    if(wrap.classList.contains('playing')) return;
+    play(wrap.getAttribute('data-vid'), wrap.getAttribute('data-start') || 0, null);
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.yt-ts'), function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      play(a.getAttribute('data-vid'), a.getAttribute('data-start') || 0, a.getAttribute('data-cover'));
+      wrap.scrollIntoView({behavior:'smooth', block:'center'});
+    });
+  });
+})();
+</script>
 
 </body>
 </html>
