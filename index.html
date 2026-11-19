@@ -127,6 +127,8 @@
   /* ===== Example image strip ===== */
   .ex-grid{display:grid;gap:10px;grid-template-columns:repeat(3,1fr);margin-top:12px}
   .ex-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:#eee}
+  .ex-grid.pair{grid-template-columns:repeat(2,1fr)}
+  .ex-grid.contain img{aspect-ratio:auto;object-fit:contain;background:#fff;padding:8px}
 
   .note{font-size:.88rem;color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:16px;margin-top:12px}
   footer{padding:48px 0 60px;text-align:center;color:var(--ink3);font-size:.85rem}
@@ -414,7 +416,7 @@
 <section id="content">
   <div class="sec-tag"><span class="t-es">Contenido</span><span class="t-en" hidden>Content</span></div>
   <h2><span class="t-es">Crea los videos sugeridos</span><span class="t-en" hidden>Please create the suggested videos</span></h2>
-  <p style="margin-bottom:14px;font-size:.95rem"><span class="t-es">Demo de absorción de aceite + reseña escéptica · Edición de dos cortes · Reseña de producto con psicología inversa · Revelado de resultado antes/después. Para videos adicionales, elige los formatos opcionales de abajo o propón tu propia idea a nuestro equipo para confirmarla antes de grabar.</span><span class="t-en" hidden>Oil-Absorption Demo + Skeptical Review · Double-slice editing · Reverse-Psychology Product Review · Before-and-After Result Reveal. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</span></p>
+  <p style="margin-bottom:14px;font-size:.95rem"><span class="t-es">Demo de absorción de aceite + reseña escéptica · Edición de dos cortes · Señales del intestino + la brecha de fibra · Revelado de resultado antes/después. Para videos adicionales, elige los formatos opcionales de abajo o propón tu propia idea a nuestro equipo para confirmarla antes de grabar.</span><span class="t-en" hidden>Oil-Absorption Demo + Skeptical Review · Double-slice editing · Intestinal Signals + the Fiber Gap · Before-and-After Result Reveal. For additional videos, choose from Optional Formats below or pitch your own idea to our team for confirmation before filming.</span></p>
 
   <div class="vgrid">
 
@@ -590,36 +592,66 @@
     <div class="vcard">
       <div class="vhead">
         <span class="no">MUST DO · VIDEO 3</span>
-        <h3><span class="t-es">Reseña de producto con psicología inversa</span><span class="t-en" hidden>Reverse-Psychology Product Review</span></h3>
-        <p class="role" style="width:100%"><span class="t-es">Abre con una advertencia juguetona o una queja simulada, luego revela tu experiencia honesta con Daily Fiber Mix. Después comparte su sabor, textura, comodidad y los beneficios personales que has notado.</span><span class="t-en" hidden>Open with a playful warning or mock complaint, then reveal your honest experience with Daily Fiber Mix. Then share its taste, texture, convenience, and the personal benefits you've noticed.</span></p>
+        <h3><span class="t-es">Señales del intestino + la brecha de fibra</span><span class="t-en" hidden>Intestinal Signals + the Fiber Gap</span></h3>
+        <p class="role" style="width:100%"><span class="t-es">Abre con una ráfaga de preguntas sobre síntomas y responde cada una con la misma frase — "es tu intestino" — luego explica la brecha de fibra y presenta Daily Fiber Mix con la demo del sobre en agua.</span><span class="t-en" hidden>Open with a rapid-fire symptom quiz and answer every question with the same line — "it's your gut" — then explain the fiber gap and introduce Daily Fiber Mix with the stick-in-water demo.</span></p>
       </div>
 
       <div class="vhook">
-        <div class="vsub"><span class="t-es">Hook para usar — Hook de psicología inversa</span><span class="t-en" hidden>Hook to Use — Reverse-Psychology Hook</span></div>
-        <p style="font-size:.86rem"><span class="t-es">Usa una advertencia juguetona o queja simulada, luego revela la sencilla rutina de fibra detrás de tu video (Elige una para usar):</span><span class="t-en" hidden>Use a playful warning or mock complaint, then reveal the simple fiber routine behind your video (Pick one to use):</span></p>
-        <div class="quote"><span class="t-es">"Si te encanta sentirte hinchado, sigue deslizando: este video no es para ti."</span><span class="t-en" hidden>"If you love feeling bloated, keep scrolling—this video isn't for you."</span></div>
-        <div class="quote"><span class="t-es">"No compres esto, a menos que quieras sentir menos hinchazón y querer cómo se ve tu estómago."</span><span class="t-en" hidden>"Don't buy this—unless you want to feel less bloated and love how your stomach looks."</span></div>
+        <div class="vsub"><span class="t-es">Hook para usar — Ráfaga "es tu intestino"</span><span class="t-en" hidden>Hook to Use — "It's your gut" rapid-fire</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Cuatro preguntas, cuatro cortes, 10–15 segundos. Pregunta a cámara, señala la zona del cuerpo y responde corto; la última pregunta va sin corte, en la misma toma (Elige una para usar):</span><span class="t-en" hidden>Four questions, four cuts, 10–15 seconds. Ask straight to camera, point at the body part, answer short; the last question stays in one take, no cut (Pick one to use):</span></p>
+        <div class="quote"><span class="t-es">"¿Sientes un dolorcito aquí en el lado derecho? — Es tu intestino."</span><span class="t-en" hidden>"Do you feel a little pain right here on your right side? — It's your gut."</span></div>
+        <div class="quote"><span class="t-es">"¿Sientes muchísimos gases o mucho reflujo? — Es tu intestino."</span><span class="t-en" hidden>"Do you get tons of gas or a lot of reflux? — It's your gut."</span></div>
+        <div class="quote"><span class="t-es">"¿Sientes que la panza se te hincha muchísimo después de comer? — Es tu intestino."</span><span class="t-en" hidden>"Does your belly blow up after you eat? — It's your gut."</span></div>
+        <div class="quote"><span class="t-es">"¿Sientes mal aliento, te mareas o te falta la energía? — Es tu intestino y te está pidiendo ayuda."</span><span class="t-en" hidden>"Bad breath, dizziness, or no energy? — It's your gut, and it's asking for help."</span></div>
         <details class="fold">
-          <summary><span class="t-es">Más hooks de psicología inversa</span><span class="t-en" hidden>More reverse-psychology hooks</span> <span class="chev">›</span></summary>
-          <div class="quote"><span class="t-es">"Quiero devolver esto. No porque me ayudó a sentirme menos hinchado. No porque se volvió la parte más fácil de mi rutina matutina…"</span><span class="t-en" hidden>"I want to return this. Not because it helped me feel less bloated. Not because it became the easiest part of my morning routine…"</span></div>
-          <div class="quote"><span class="t-es">"Hagas lo que hagas, no le agregues esto a tu café… a menos que quieras una forma más fácil de obtener más fibra."</span><span class="t-en" hidden>"Whatever you do, don't add this to your coffee… unless you want an easier way to get more fiber."</span></div>
-          <div class="quote"><span class="t-es">"No pruebes esto si no estás listo para hacer de la fibra parte de tu rutina diaria."</span><span class="t-en" hidden>"Don't try this if you're not ready to make fiber part of your daily routine."</span></div>
-          <div class="quote"><span class="t-es">"Definitivamente no necesitas esto, a menos que quieras una forma sencilla de añadir fibra prebiótica a tu día."</span><span class="t-en" hidden>"You definitely don't need this—unless you want a simple way to add prebiotic fiber to your day."</span></div>
+          <summary><span class="t-es">Más preguntas para la ráfaga</span><span class="t-en" hidden>More rapid-fire questions</span> <span class="chev">›</span></summary>
+          <div class="quote"><span class="t-es">"¿Vas al baño cada tres días y ya lo ves normal? — Es tu intestino."</span><span class="t-en" hidden>"Going every three days and you think that's normal? — It's your gut."</span></div>
+          <div class="quote"><span class="t-es">"¿Te despiertas con la panza dura y sigue dura todo el día? — Es tu intestino."</span><span class="t-en" hidden>"Wake up with a hard belly that stays hard all day? — It's your gut."</span></div>
+          <div class="quote"><span class="t-es">"¿Crees que ya comes suficiente fibra? — Es tu intestino."</span><span class="t-en" hidden>"Think you eat enough fiber already? — It's your gut."</span></div>
         </details>
+        <p style="background:#FFF6D6;border:1.5px solid #F5C518;border-radius:10px;padding:10px 12px;margin:10px 0 8px;font-size:.9rem;line-height:1.45"><span class="t-es">⭐ <strong>Overlay clave:</strong> cada vez que digas "es tu intestino", pega la ilustración del intestino (PNG transparente, abajo) sobre tu camiseta o sobre tu vientre, como en el ejemplo. Es lo que hace que la ráfaga se entienda — no lo dejes solo en palabras.</span><span class="t-en" hidden>⭐ <strong>Key overlay:</strong> every time you say "it's your gut", stick the intestine illustration (transparent PNG, below) over your shirt or belly, like the example. That's what makes the rapid-fire land — don't leave it as words only.</span></p>
+        <div class="ex-grid pair contain">
+          <img src="assets/raquel-gut-example.webp" alt="Reference still — intestine overlay on every answer" loading="lazy">
+          <img src="assets/gut-overlay.png" alt="Intestine overlay asset — transparent PNG" loading="lazy">
+        </div>
+        <div class="vsub" style="margin-top:14px"><span class="t-es">La prueba que la hace creíble — muestra la cifra en pantalla</span><span class="t-en" hidden>The proof that makes it believable — put the number on screen</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Ella pega la tarjeta con la cifra encima del video mientras habla de la deficiencia de fibra. Recrea una tarjeta igual en español o inglés para tu mercado.</span><span class="t-en" hidden>She pastes the stat card over the video while she talks about fiber deficiency. Recreate the same kind of card in your market's language.</span></p>
+        <div><img src="assets/raquel-fibergap.jpg" alt="Reference — fiber gap stat card shown on screen" loading="lazy" style="width:100%;border:1px solid var(--line);border-radius:12px;background:#fff"></div>
+        <p style="font-size:.74rem;color:var(--muted);margin-top:6px;line-height:1.5"><span class="t-es">Capturas tomadas del video de referencia de @raquelfindss (min. 0:17 y 0:21).</span><span class="t-en" hidden>Stills taken from the @raquelfindss reference video (0:17 and 0:21).</span></p>
       </div>
 
       <div class="vbody">
         <div class="vsub"><span class="t-es">Cuerpo</span><span class="t-en" hidden>Body</span></div>
+        <div style="background:#EAF5F0;border:1.5px solid #2F9D6B;border-radius:10px;padding:10px 12px;margin:2px 0 10px;font-size:.84rem;line-height:1.5">
+          <span class="t-es"><strong>OBLIGATORIO</strong> — Di la cifra y pruébala: más del 95% de la población en Estados Unidos no consume la fibra diaria recomendada, y la mayoría ni lo sabe (la "brecha de la fibra").</span><span class="t-en" hidden><strong>MUST</strong> — Say the number and prove it: over 95% of the population in the US doesn't hit the recommended daily fiber intake, and most of them don't even know it ("the fiber gap").</span>
+          <div class="quote" style="background:#fff;margin:8px 0 0"><span class="t-es">"Créeme, yo sé lo difícil que es llegar a la fibra diaria que tu cuerpo necesita — por eso tomo esto todos los días."</span><span class="t-en" hidden>"Trust me, I know how hard it is to hit the fiber your body needs every day — that's why I take this daily."</span></div>
+        </div>
         <ul>
-          <li><span class="t-es"><strong>Comparte una experiencia personal o un punto de dolor.</strong> Menciona la hinchazón, una sensación pesada, la irregularidad u otra experiencia que encaje con el ángulo elegido. Las imágenes del punto de dolor son opcionales.</span><span class="t-en" hidden><strong>Share a personal experience or pain point.</strong> Mention bloating, a heavy feeling, irregularity, or another experience that fits your chosen angle. Pain-point images are optional.</span></li>
-          <li><span class="t-es"><strong>Presenta Daily Fiber Mix.</strong> Cada stick tiene 6 g de fibra (unas 20 frambuesas) y fibra prebiótica para apoyar la bacteria intestinal, las evacuaciones regulares, menos hinchazón y un vientre de aspecto más plano.</span><span class="t-en" hidden><strong>Introduce Daily Fiber Mix.</strong> Each stick has 6g of fiber (about 20 raspberries) and prebiotic fiber to support gut bacteria, regular bowel movements, less bloating, and a flatter-looking stomach.</span></li>
-          <li><span class="t-es"><strong>Muestra un visual relevante del producto.</strong> Mezclalo en una bebida o comida que ya disfrutes. El material del demo de absorción de aceite está disponible y se puede incluir si encaja de forma natural.</span><span class="t-en" hidden><strong>Show a relevant product visual.</strong> Stir it into a drink or food you already enjoy. The oil-absorption demo footage is provided and can be included if it fits naturally.</span></li>
+          <li><span class="t-es"><strong>Señala el cuerpo, no solo habla.</strong> Cada pregunta apunta a una zona distinta (lado derecho del abdomen, panza, pecho y cabeza); la mano en cuadro hace que la pregunta se sienta real.</span><span class="t-en" hidden><strong>Point at your body, not just talk.</strong> Each question targets a different spot (lower right side, belly, chest and head); the hand in frame makes the question feel real.</span></li>
+          <li><span class="t-es"><strong>Cierra la ráfaga en una sola frase.</strong> "Es tu intestino y te está pidiendo ayuda" — baja el tono, mira a cámara y deja un beat antes del corte.</span><span class="t-en" hidden><strong>Close the rapid-fire on one line.</strong> "It's your gut, and it's asking for help" — drop your tone, look at the camera and hold a beat before the cut.</span></li>
+          <li><span class="t-es"><strong>Presenta Daily Fiber Mix con la demo del sobre.</strong> Un sobre = 6 g de fibra, 5 tipos de fibra + 4 prebióticos, sin azúcar añadido y sin sabor; viértelo en un vaso de agua como ella y deja que se vea disolver. Menciona que se mezcla con lo que sea.</span><span class="t-en" hidden><strong>Introduce Daily Fiber Mix with the stick demo.</strong> One stick = 6g of fiber, 5 types of fiber + 4 prebiotics, no added sugar and flavorless; pour it into a glass of water like she does and let it dissolve on camera. Mention it mixes into anything.</span></li>
+          <li><span class="t-es"><strong>Regularidad y menos inflamación, sin promesas médicas.</strong> Habla de lo que notaste tú (regularidad, menos hinchazón) y deja el descargo "results may vary / no es consejo médico" en pantalla, como en el video.</span><span class="t-en" hidden><strong>Regularity and less bloating, without medical promises.</strong> Talk about what you noticed yourself (regularity, less bloating) and keep the "results may vary / not medical advice" disclaimer on screen, like the reference video.</span></li>
         </ul>
       </div>
 
       <div class="vcta">
         <div class="vsub"><span class="t-es">CTA para usar</span><span class="t-en" hidden>CTA to Use</span></div>
-            <div class="quote"><span class="t-es"><strong>Ángulo de hinchazón:</strong> "¿La hinchazón te molesta? 🔔 <strong>El PAQUETE TRIPLE tiene descuento de Black Friday y sale mucho más barato que comprar un solo paquete.</strong> Además, tienes 90 días para devolverlo — ¿qué tienes que perder? ¡Corre antes de que se agote y toca el enlace del producto mientras siga activo!"</span><span class="t-en" hidden><strong>Bloating angle:</strong> "Tired of bloating? 🔔 <strong>The THREE-PACK is on a Black Friday deal — way better value than buying just one pack.</strong> It comes with a 90-day money-back guarantee, so what do you have to lose? Grab it before it sells out — tap the product link while it's still up!"</span></div>
+            <div class="quote"><span class="t-es"><strong>Ángulo brecha de fibra:</strong> "¿Cuánta fibra crees que comes al día? Casi nadie llega. 🔔 <strong>El PAQUETE TRIPLE tiene la oferta de Black Friday y sale mucho más barato que comprar un solo paquete.</strong> Además tienes 90 días para devolverlo — ¿qué tienes que perder? Toca el enlace que aparece arriba de mi nombre; si no está, es que se agotó otra vez."</span><span class="t-en" hidden><strong>Fiber-gap angle:</strong> "How much fiber do you think you actually get a day? Almost nobody hits it. 🔔 <strong>The THREE-PACK is on a Black Friday deal — way better value than buying just one pack.</strong> Plus you get 90 days to send it back — what do you have to lose? Tap the link right above my name; if it's gone, it sold out again."</span></div>
+      </div>
+
+      <div class="vrefs">
+        <div class="ref-item">
+          <video controls preload="metadata" playsinline src="videos/ref/7705251255169355039.mp4"></video>
+          <figcaption>@raquelfindss — señales del intestino + brecha de fibra</figcaption>
+          <div class="actions">
+            <a class="btn-mp4" href="videos/ref/7705251255169355039.mp4" download="reference-raquelfindss-gut.mp4">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+            </a>
+            <a class="btn-tk" href="https://www.tiktok.com/@raquelfindss/video/7705251255169355039" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 7.1c-2.1 0-3.8-1.7-3.9-3.8V3h-3v10.4a2.6 2.6 0 1 1-2.6-2.6c.2 0 .5 0 .7.1V7.7a6 6 0 1 0 4.9 5.9v-4.9a7 7 0 0 0 3.9 1.2v-2.8z"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
