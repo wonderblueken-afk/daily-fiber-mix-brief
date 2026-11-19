@@ -129,6 +129,9 @@
   .ex-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:#eee}
   .ex-grid.pair{grid-template-columns:repeat(2,1fr)}
   .ex-grid.contain img{aspect-ratio:auto;object-fit:contain;background:#fff;padding:8px}
+  .ex-grid.celeb{grid-template-columns:repeat(2,1fr)}
+  .celebblock{grid-column:1/-1;margin-top:6px;padding-top:14px;border-top:1px solid var(--line)}
+  @media(min-width:760px){.ex-grid.celeb{grid-template-columns:repeat(4,1fr)}}
 
   .note{font-size:.88rem;color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:16px;margin-top:12px}
   footer{padding:48px 0 60px;text-align:center;color:var(--ink3);font-size:.85rem}
@@ -587,7 +590,6 @@
       </div>
     </div>
 
-
     <!-- ===== VIDEO 3 ===== -->
     <div class="vcard">
       <div class="vhead">
@@ -601,10 +603,10 @@
         <p style="font-size:.86rem"><span class="t-es">Cuatro preguntas, cuatro cortes, 10–15 segundos. Pregunta a cámara, señala la zona del cuerpo y responde corto; la última pregunta va sin corte, en la misma toma (Elige una para usar):</span><span class="t-en" hidden>Four questions, four cuts, 10–15 seconds. Ask straight to camera, point at the body part, answer short; the last question stays in one take, no cut (Pick one to use):</span></p>
         <div class="quote"><span class="t-es">"¿Sientes un dolorcito aquí en el lado derecho? — Es tu intestino."</span><span class="t-en" hidden>"Do you feel a little pain right here on your right side? — It's your gut."</span></div>
         <div class="quote"><span class="t-es">"¿Sientes muchísimos gases o mucho reflujo? — Es tu intestino."</span><span class="t-en" hidden>"Do you get tons of gas or a lot of reflux? — It's your gut."</span></div>
-        <div class="quote"><span class="t-es">"¿Sientes que la panza se te hincha muchísimo después de comer? — Es tu intestino."</span><span class="t-en" hidden>"Does your belly blow up after you eat? — It's your gut."</span></div>
-        <div class="quote"><span class="t-es">"¿Sientes mal aliento, te mareas o te falta la energía? — Es tu intestino y te está pidiendo ayuda."</span><span class="t-en" hidden>"Bad breath, dizziness, or no energy? — It's your gut, and it's asking for help."</span></div>
         <details class="fold">
           <summary><span class="t-es">Más preguntas para la ráfaga</span><span class="t-en" hidden>More rapid-fire questions</span> <span class="chev">›</span></summary>
+        <div class="quote"><span class="t-es">"¿Sientes que la panza se te hincha muchísimo después de comer? — Es tu intestino."</span><span class="t-en" hidden>"Does your belly blow up after you eat? — It's your gut."</span></div>
+        <div class="quote"><span class="t-es">"¿Sientes mal aliento, te mareas o te falta la energía? — Es tu intestino y te está pidiendo ayuda."</span><span class="t-en" hidden>"Bad breath, dizziness, or no energy? — It's your gut, and it's asking for help."</span></div>
           <div class="quote"><span class="t-es">"¿Vas al baño cada tres días y ya lo ves normal? — Es tu intestino."</span><span class="t-en" hidden>"Going every three days and you think that's normal? — It's your gut."</span></div>
           <div class="quote"><span class="t-es">"¿Te despiertas con la panza dura y sigue dura todo el día? — Es tu intestino."</span><span class="t-en" hidden>"Wake up with a hard belly that stays hard all day? — It's your gut."</span></div>
           <div class="quote"><span class="t-es">"¿Crees que ya comes suficiente fibra? — Es tu intestino."</span><span class="t-en" hidden>"Think you eat enough fiber already? — It's your gut."</span></div>
@@ -667,6 +669,8 @@
         <div class="vsub"><span class="t-es">Hook para usar — Antes/después extremo + hook de entrenador de celebridades</span><span class="t-en" hidden>Hook to Use — Extreme Before-and-After + Celebrity-Trainer Hook</span></div>
         <p style="font-size:.86rem"><span class="t-es">Abre con una imagen clara y personal de antes/después, luego usa una referencia breve al entrenador de celebridades para introducir el ángulo de la fibra (Elige una muestra para recrearla).</span><span class="t-en" hidden>Open with a clear, personal before-and-after visual, then use a short celebrity-trainer reference to introduce the fiber angle (Pick one sample to recreate it ).</span></p>
         <div class="vsub" style="margin-top:8px"><span class="t-es">Opciones de texto en pantalla (Elige una para usar):</span><span class="t-en" hidden>On-screen text options (Pick one to use):</span></div>
+        <div class="quote"><span class="t-es">"Dicen que el entrenador del nuevo 007 (Robert Pattinson) recomienda fibra todos los días."</span><span class="t-en" hidden>"They say the new 007's trainer — Robert Pattinson's — recommends fiber every day."</span></div>
+        <div class="quote"><span class="t-es">"Del entrenador de Lady Gaga al del nuevo 007: la misma recomendación — fibra."</span><span class="t-en" hidden>"From Lady Gaga's trainer to the new 007's: the same recommendation — fiber."</span></div>
         <div class="quote"><span class="t-es">"LA ENTRENADORA DE LADY GAGA NO MENTÍA…"</span><span class="t-en" hidden>"LADY GAGA'S TRAINER WASN'T LYING…"</span></div>
         <div class="quote"><span class="t-es">"Encontré el secreto de vientre plano de Charlie Puth."</span><span class="t-en" hidden>"I found Charlie Puth's flat-stomach secret."</span></div>
         <details class="fold">
@@ -699,6 +703,18 @@
         <div class="vsub"><span class="t-es">CTA para usar</span><span class="t-en" hidden>CTA to Use</span></div>
             <div class="quote"><span class="t-es"><strong>Ángulo de vientre plano:</strong> "¿Quieres un vientre más plano con un hábito diario fácil? 🔔 <strong>El PAQUETE TRIPLE tiene descuento de Black Friday y sale mucho más barato que comprar un solo paquete.</strong> Además, tienes 90 días para devolverlo — ¿qué tienes que perder? ¡Corre antes de que se agote y toca el enlace del producto mientras siga activo!"</span><span class="t-en" hidden><strong>Flat-tummy angle:</strong> "Want a flatter stomach with an easy daily habit? 🔔 <strong>The THREE-PACK is on a Black Friday deal — way better value than buying just one pack.</strong> It comes with a 90-day money-back guarantee, so what do you have to lose? Grab it before it sells out — tap the product link while it's still up!"</span></div>
       </div>
+      <div class="celebblock">
+        <div class="vsub"><span class="t-es">Referencias — físico de celebridades (el tono que promete el hook)</span><span class="t-en" hidden>References — celebrity physique (the tone the hook promises)</span></div>
+        <p style="font-size:.86rem"><span class="t-es">Así se ve el físico que el hook da por hecho: Lady Gaga y Robert Pattinson, el nuevo 007. Úsalas como referencia de tono, encuadre y luz — no las publiques tal cual y no pongas texto en inglés encima.</span><span class="t-en" hidden>This is the physique the hook implies: Lady Gaga and Robert Pattinson, the new 007. Use them as a reference for tone, framing and light — don't repost them as-is and don't put English text over them.</span></p>
+        <div class="ex-grid celeb">
+          <img src="assets/celeb-gaga-1.webp" alt="Lady Gaga — fit physique reference 1" loading="lazy">
+          <img src="assets/celeb-gaga-2.webp" alt="Lady Gaga — fit physique reference 2" loading="lazy">
+          <img src="assets/celeb-rob-1.webp" alt="Robert Pattinson — new 007, physique reference 1" loading="lazy">
+          <img src="assets/celeb-rob-2.webp" alt="Robert Pattinson — new 007, physique reference 2" loading="lazy">
+        </div>
+        <p style="font-size:.74rem;color:var(--muted);margin-top:6px;line-height:1.5"><span class="t-es">Nota interna: antes de grabar, confirma con la marca la relación entrenador–Pattinson; si no está confirmada, mantén el tono "dicen que".</span><span class="t-en" hidden>Internal note: before filming, confirm the trainer–Pattinson link with the brand; if it isn't confirmed, keep the "they say" framing.</span></p>
+      </div>
+
       <div class="vrefs">
         <div class="ref-item">
           <video controls preload="metadata" playsinline src="videos/ref/7689433700164963614.mp4"></video>
@@ -766,7 +782,6 @@
   </div>
   <p class="yt-note"><span class="t-es">Ambos momentos provienen de la misma entrevista con Harley Pasternak. Los enlaces abren el video original en YouTube en ese minuto.</span><span class="t-en" hidden>Both moments come from the same interview with Harley Pasternak. The links open the original YouTube video at the cited minute.</span></p>
 </div>
-
 
   <!-- OPTIONAL FORMATS (below must videos) -->
   <div class="side-card" style="margin-top:14px">
@@ -854,7 +869,6 @@
     </ul>
   </div>
 </section>
-
 
 <!-- ===== REFERENCE ===== -->
 <section id="reference">
