@@ -129,9 +129,10 @@
   .ex-grid img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:#eee}
   .ex-grid.pair{grid-template-columns:repeat(2,1fr)}
   .ex-grid.contain img{aspect-ratio:auto;object-fit:contain;background:#fff;padding:8px}
-  .ex-grid.celeb{grid-template-columns:repeat(2,1fr)}
+  .ex-grid.celeb{grid-template-columns:repeat(5,1fr);gap:8px}
+  .ex-grid.celeb img,.ex-grid.celeb video{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;border:1px solid var(--line);background:#eee;display:block}
   .celebblock{grid-column:1/-1;margin-top:6px;padding-top:14px;border-top:1px solid var(--line)}
-  @media(min-width:760px){.ex-grid.celeb{grid-template-columns:repeat(4,1fr)}}
+  @media(min-width:760px){.ex-grid.celeb{grid-template-columns:repeat(5,1fr)}}
 
   .note{font-size:.88rem;color:var(--ink2);background:#fff;border:1px dashed var(--line);border-radius:14px;padding:16px;margin-top:12px}
   footer{padding:48px 0 60px;text-align:center;color:var(--ink3);font-size:.85rem}
@@ -705,12 +706,13 @@
       </div>
       <div class="celebblock">
         <div class="vsub"><span class="t-es">Referencias — físico de celebridades (el tono que promete el hook)</span><span class="t-en" hidden>References — celebrity physique (the tone the hook promises)</span></div>
-        <p style="font-size:.86rem"><span class="t-es">Así se ve el físico que el hook da por hecho: Lady Gaga y Robert Pattinson, el nuevo 007. Úsalas como referencia de tono, encuadre y luz — no las publiques tal cual y no pongas texto en inglés encima.</span><span class="t-en" hidden>This is the physique the hook implies: Lady Gaga and Robert Pattinson, the new 007. Use them as a reference for tone, framing and light — don't repost them as-is and don't put English text over them.</span></p>
+        <p style="font-size:.86rem"><span class="t-es">Así se ve el físico que el hook da por hecho: Ariana Grande, Lady Gaga y Robert Pattinson, el nuevo 007. El primer vídeo es la lista de estrellas de Harley Pasternak. Úsalas como referencia de tono, encuadre y luz — no las publiques tal cual y no pongas texto en inglés encima.</span><span class="t-en" hidden>This is the physique the hook implies: Ariana Grande, Lady Gaga and Robert Pattinson, the new 007. The first clip is Harley Pasternak's A-list client roster. Use them as a reference for tone, framing and light — don't repost them as-is and don't put English text over them.</span></p>
         <div class="ex-grid celeb">
-          <img src="assets/celeb-gaga-1.webp" alt="Lady Gaga — fit physique reference 1" loading="lazy">
-          <img src="assets/celeb-gaga-2.webp" alt="Lady Gaga — fit physique reference 2" loading="lazy">
-          <img src="assets/celeb-rob-1.webp" alt="Robert Pattinson — new 007, physique reference 1" loading="lazy">
-          <img src="assets/celeb-rob-2.webp" alt="Robert Pattinson — new 007, physique reference 2" loading="lazy">
+          <video controls preload="metadata" playsinline muted loop poster="assets/celeb-list-poster.jpg" src="videos/ref/superstarlist-celeb-list.mp4"></video>
+          <img src="assets/celeb-ariana-1.webp" alt="Ariana Grande — physique reference" loading="lazy">
+          <img src="assets/celeb-gaga-3.webp" alt="Lady Gaga — physique reference" loading="lazy">
+          <img src="assets/celeb-rob-3.webp" alt="Robert Pattinson — new 007, portrait reference" loading="lazy">
+          <img src="assets/celeb-rob-2.webp" alt="Robert Pattinson — new 007, physique reference" loading="lazy">
         </div>
         <p style="font-size:.74rem;color:var(--muted);margin-top:6px;line-height:1.5"><span class="t-es">Nota interna: antes de grabar, confirma con la marca la relación entrenador–Pattinson; si no está confirmada, mantén el tono "dicen que".</span><span class="t-en" hidden>Internal note: before filming, confirm the trainer–Pattinson link with the brand; if it isn't confirmed, keep the "they say" framing.</span></p>
       </div>
