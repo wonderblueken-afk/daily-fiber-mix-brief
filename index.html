@@ -209,7 +209,7 @@
   .ref-grid{display:grid;gap:12px;grid-template-columns:repeat(2,1fr)}
   @media(min-width:760px){.ref-grid{grid-template-columns:repeat(4,1fr)}}
   .vrefs{grid-column:1/-1;display:grid;gap:12px;grid-template-columns:repeat(3,1fr);margin-top:4px}
-  .vrefs:has(.ref-item:only-child){grid-template-columns:1fr}
+  .vrefs:has(.ref-item:only-child){grid-template-columns:repeat(3,1fr)}
   @media(min-width:760px){.vrefs{grid-template-columns:repeat(3,1fr)}}
   .vrefs .ref-item video{aspect-ratio:9/16}
   .ref-item{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
